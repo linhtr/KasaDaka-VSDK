@@ -106,7 +106,7 @@
 		</subdialog>		
 		<field name="birth_date">
 			<prompt>
-				Are you chickens born today? If yes press 1. If no press 2.
+				Are your chickens born today? If yes press 1. If no press 2.
 			</prompt>
 			<option dtmf="1">yes</option>
 			<option dtmf="2">no</option>
@@ -123,7 +123,7 @@
 		</field>
 		<field name="born_days_ago">
 			<prompt>
-			How many days ago are your chickens born? Enter the number of days ago.
+			How many days ago were your chickens born? Enter the number of days ago.
 			</prompt>
 			<grammar version="1.0" root="top" mode="dtmf">
 				<rule id="top">
