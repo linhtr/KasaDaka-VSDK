@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml">
+ 	<menu id="welcomeMenu" dtmf="true"> 		
+		<prompt>
+			Hello farmer! Welcome to our chicken vaccination programm. Are you already registered?
+			Press 1, for yes.
+ 			Press 2, for no.
+		</prompt>
+		<choice next="#yesaccount"/>
+		<choice next="#noaccount"/>
+	</menu>	
+
+	<form id="yesaccount" dtmf="true">
+		<field name="login">
+			<prompt>
+				To log into your profile, please say your first and last name.
+			</prompt>
+			<!-- Uiteindelijk moet dit van een externe DB komen met user profiles -->
+			<grammar  version="1.0" mode="voice" type="application/srgs+xml" tag-format="semantics/1.0" root="top">
+		      	<rule id="top">
+		        	<one-of>
+		         		<item>John Williams</item>
+		         		<item>Kate Smith</item>
+		        	</one-of>
+		      	</rule>
+		    </grammar>
+			<filled>
+				<prompt>
+					You're now logged in.
+				</prompt>
+				<goto next="#main_menu" />
+			</filled>
+		</field>
+	</form>
+
+	<form id="main_menu">
+		<field name="main_menu_selection">
+			<prompt>
+ 				This is the main menu. Please pick your menu option.
+ 				Press 1, if you would like to enter a date of newborn chickens.
+ 				Press 2, if you would like to make a notification of diseased chickens.
+ 				Press 3, if you would like to enter the date of the first vaccination.
+ 			</prompt>
+ 			<grammar version="1.0" root="top" mode="dtmf">
+		        <rule id="top">
+					<one-of>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+					</one-of>
+				</rule>
+		    </grammar>
+ 			<filled>
+ 				<script> <![CDATA[
+	                var next_destination = "";
+	                switch (main_menu_selection){
+
+	                case "1" :
+	                	next_destination = "#newborns";
+	                    break;
+	                    
+	                case "2" :
+	                    next_destination = "#disease_notification";
+	                    break;
+	                    
+	                case "3" :
+	                    next_destination = "#vaccination_notification";
+	                    break;
+	                }
+	               	]]> </script>
+	            <goto expr="next_destination"/>
+ 			</filled>
+		</field>
+	</form>
+
+	<form id="newborns">
+		<field name="amount_newborns" type="digits" modal="true">
+			<prompt>
+				How many newborn chickens do you have? Type the number on the keyboard.
+			</prompt>
+			<filled>
+				<!--
+				<prompt>
+			        You have entered
+			        <say-as interpret-as="vxml:digits">
+			          <value expr="amount_newborns"/>
+			        </say-as>
+			        newborns. Is this correct?
+			    </prompt>
+				-->
+			    <assign name="utterance" expr="amount_newborns$.utterance"/>
+			    <goto nextitem="confirm_amount_newborns" />
+			</filled>
+		</field>
+		<!-- error handling, still testing -->
+		<subdialog name="confirm_amount_newborns" src="#ynconfirm" cond="false">
+			<param name="user_input" expr="utterance"/>
+			<filled>
+				<if cond="confirm_amount_newborns.result == false">
+					<clear namelist="amount_newborns"/>
+					<goto next="#newborns" />
+				<else />
+					<goto nextitem="birth_date" />
+				</if>
+			</filled>
+		</subdialog>		
+		<field name="birth_date">
+			<prompt>
+				Are you chickens born today? If yes press 1. If no press 2.
+			</prompt>
+			<option dtmf="1">yes</option>
+			<option dtmf="2">no</option>
+			<filled>
+				<if cond="birth_date == 'yes'">
+					<prompt>
+					Thank you. Your information has been added to your profile.
+					</prompt>
+					<goto next="#end_menu"/>
+				<else/>
+					<goto nextitem="born_days_ago"/>
+				</if>
+			</filled>
+		</field>
+		<field name="born_days_ago">
+			<prompt>
+			How many days ago are your chickens born? Enter the number of days ago.
+			</prompt>
+			<grammar version="1.0" root="top" mode="dtmf">
+				<rule id="top">
+					<one-of>
+						<item>0</item>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+						<item>4</item>
+						<item>5</item>
+						<item>6</item>
+						<item>7</item>
+						<item>8</item>
+						<item>9</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<filled>
+				<prompt>
+				Thank you. Your information has been added to your profile.
+				</prompt>
+				<goto next="#end_menu"/>
+			</filled>
+		</field>
+	</form>
+
+	<form id="disease_notification">
+		<field name="disease">
+			<prompt>
+				What disease would you like to report?
+				Press 1, for Newcastle Disease.
+				Press 2, for Chickenpox.
+				Press 3, for Infectious Bronchitis.
+				Press 4, for Gomburu.
+			</prompt>
+			<grammar version="1.0" root="top" mode="dtmf">
+		        <rule id="top">
+					<one-of>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+						<item>4</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<!-- Informatie moet nog opgeslagen worden -->
+			<filled>
+				<goto nextitem="infected_chickens" />
+			</filled>
+		</field>
+		<field name="infected_chickens">
+			<prompt>
+				How many of your chickens are infected with this disease? Enter a number.
+			</prompt>
+			<!-- Moet nog verandert worden naar meerdere cijfers input en opgeslagen worden -->
+			<grammar version="1.0" root="top" mode="dtmf">
+	        	<rule id="top">
+					<one-of>
+						<item>0</item>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+						<item>4</item>
+						<item>5</item>
+						<item>6</item>
+						<item>7</item>
+						<item>8</item>
+						<item>9</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<filled>
+				<prompt>
+					Thank you for reporting. We will make a note of this report.
+					<!-- "this report" zou vervangen kunnen worden door herhaling ziekte met aantal kippen -->
+				</prompt>
+				<goto nextitem="another_disease" />
+			</filled>
+		</field>
+		<field name="another_disease">
+			<prompt>
+				Would you like to report another infection?
+				Press 1, for yes.
+				Press 2, for no.
+			</prompt>
+			<option dtmf="1">yes</option>
+			<option dtmf="2">no</option>
+ 			<filled>
+	 			<if cond="another_disease == 'yes'">
+				    <goto next="#disease_notification"/>
+				<else />
+				    <prompt>Alright, thank you.</prompt>
+				    <goto next="#end_menu" />
+				</if>
+			</filled>
+		</field>	
+	</form>
+
+	<form id="vaccination_notification">
+		<field name="chickens_vaccinated">
+			<prompt>
+				How many newborn chickens did you vaccinate? Enter a number.
+			</prompt>
+			<!-- Moet nog verandert worden naar meerdere cijfers input en opgeslagen worden -->
+			<grammar version="1.0" root="top" mode="dtmf">
+	        	<rule id="top">
+					<one-of>
+						<item>0</item>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+						<item>4</item>
+						<item>5</item>
+						<item>6</item>
+						<item>7</item>
+						<item>8</item>
+						<item>9</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<filled>
+				<goto nextitem="vaccination_date" />
+			</filled>
+		</field>
+		<field name="vaccination_date">
+			<prompt>
+			Are you chickens vaccinated today? If yes, press 1. If no, press 2.
+			</prompt>
+			<option dtmf="1">yes</option>
+			<option dtmf="2">no</option>
+			<filled>
+				<if cond="vaccination_date == 'yes'">
+					<prompt>
+					Thank you. Your information has been added to your profile. We will contact you within 5 days for revaccination of your chickens.
+					</prompt>
+					<goto next="#end_menu"/>
+				<else/>
+					<goto nextitem="vac_days_ago"/>
+				</if>
+			</filled>
+		</field>
+		<field name="vac_days_ago">
+			<prompt>
+			How many days ago were your chicken vaccinated? Enter the number of days ago.
+			</prompt>
+			<grammar version="1.0" root="top" mode="dtmf">
+				<rule id="top">
+					<one-of>
+						<item>0</item>
+						<item>1</item>
+						<item>2</item>
+						<item>3</item>
+						<item>4</item>
+						<item>5</item>
+						<item>6</item>
+						<item>7</item>
+						<item>8</item>
+						<item>9</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<filled>
+				<prompt>
+				Thank you. Your information has been added to your profile. We will contact you within 5 days for revaccination of your chickens.
+				</prompt>
+				<goto next="#end_menu"/>
+			</filled>
+		</field>
+	</form>
+
+	<!-- error handling, still testing -->
+	<form id="ynconfirm">
+		<var name="user_input"/>
+		<field name="yn">
+			<prompt>
+				You have entered <value expr="user_input"/>. Is this correct?
+				Press 1, for yes.
+				Press 2, for no.
+			</prompt>
+			<option dtmf="1" value="true">yes</option>
+			<option dtmf="2" value="false">no</option>
+			<filled>
+				<var name="result" expr="false"/>
+				<if cond="yn == 'yes'">
+					<assign name="result" expr="true"/>
+				</if>
+				<return namelist="yn"/>
+			</filled>
+		</field>
+	</form>
+
+	<form id="end_menu">
+		<field name="end_menu_selection">
+			<prompt>
+				Press 1, to return to the main menu.
+				Press 2, to end this call.
+			</prompt>
+			<option dtmf="1">main menu</option>
+			<option dtmf="2">end</option>
+ 			<filled>
+	 			<if cond="end_menu_selection == 'main menu'">
+				    <goto next="#main_menu"/>
+				<else />
+				    <prompt>Thank you for using our programm. This call will now be ended.</prompt>
+				</if>
+			</filled>
+		</field>
+	</form>
+	
+
+	<form id="noaccount">
+		<field name="register">
+			<prompt>
+			Let's make an account. Please say your first and last name.
+			</prompt>
+			<grammar version="1.0" mode="voice" type="application/srgs+xml" tag-format="semantics/1.0" root="top">
+				<rule id="top">
+					<one-of>
+						<item>John Williams</item>
+					</one-of>
+				</rule>
+			</grammar>
+			<filled>
+				<prompt>You have just created an account.</prompt>
+				<goto next="#yesaccount"/>
+			</filled>
+		</field>
+	</form>
+
+</vxml>
