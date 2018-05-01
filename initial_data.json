@@ -17,33 +17,9 @@
 },
 {
   "model": "service_development.voicelabel",
-  "pk": 3,
-  "fields": {
-    "name": "This is the truth",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
   "pk": 4,
   "fields": {
     "name": "English language",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 5,
-  "fields": {
-    "name": "Thank you for using this service",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 6,
-  "fields": {
-    "name": "Wow, it must be a really boring guy!",
     "description": ""
   }
 },
@@ -156,7 +132,7 @@
   "pk": 20,
   "fields": {
     "name": "Zero",
-    "description": ""
+    "description": null
   }
 },
 {
@@ -173,22 +149,6 @@
   "fields": {
     "name": "No account",
     "description": null
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 23,
-  "fields": {
-    "name": "Does the king like to drink beer?",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 25,
-  "fields": {
-    "name": "Please speak your message",
-    "description": ""
   }
 },
 {
@@ -259,7 +219,7 @@
   "model": "service_development.voicelabel",
   "pk": 36,
   "fields": {
-    "name": "Thank you. Your information has been added to your",
+    "name": "Your information is added to your profile.",
     "description": null
   }
 },
@@ -478,29 +438,11 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 1,
-  "fields": {
-    "parent": 6,
-    "language": 2,
-    "audio": "boring_guy_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 2,
-  "fields": {
-    "parent": 6,
-    "language": 1,
-    "audio": "boring_guy_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 7,
   "fields": {
     "parent": 22,
     "language": 2,
-    "audio": "no_en.wav"
+    "audio": "no_en_J3poNiZ.wav"
   }
 },
 {
@@ -509,7 +451,7 @@
   "fields": {
     "parent": 22,
     "language": 3,
-    "audio": "no_fr.wav"
+    "audio": "no_fr_8dqXMbr.wav"
   }
 },
 {
@@ -518,7 +460,7 @@
   "fields": {
     "parent": 21,
     "language": 2,
-    "audio": "yes_en.wav"
+    "audio": "yes_en_As1A6vI.wav"
   }
 },
 {
@@ -527,7 +469,7 @@
   "fields": {
     "parent": 21,
     "language": 3,
-    "audio": "yes_fr.wav"
+    "audio": "yes_fr_dd5xBhn.wav"
   }
 },
 {
@@ -910,42 +852,6 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 54,
-  "fields": {
-    "parent": 6,
-    "language": 3,
-    "audio": "boring_guy_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 55,
-  "fields": {
-    "parent": 5,
-    "language": 1,
-    "audio": "thank_you_for_using_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 56,
-  "fields": {
-    "parent": 5,
-    "language": 2,
-    "audio": "thank_you_for_using_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 57,
-  "fields": {
-    "parent": 5,
-    "language": 3,
-    "audio": "thank_you_for_using_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 58,
   "fields": {
     "parent": 4,
@@ -969,33 +875,6 @@
     "parent": 4,
     "language": 3,
     "audio": "english_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 61,
-  "fields": {
-    "parent": 3,
-    "language": 1,
-    "audio": "truth_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 62,
-  "fields": {
-    "parent": 3,
-    "language": 2,
-    "audio": "truth_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 63,
-  "fields": {
-    "parent": 3,
-    "language": 3,
-    "audio": "truth_fr.wav"
   }
 },
 {
@@ -1054,42 +933,6 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 70,
-  "fields": {
-    "parent": 23,
-    "language": 1,
-    "audio": "king_question_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 71,
-  "fields": {
-    "parent": 23,
-    "language": 2,
-    "audio": "king_question_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 72,
-  "fields": {
-    "parent": 23,
-    "language": 3,
-    "audio": "king_question_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 74,
-  "fields": {
-    "parent": 25,
-    "language": 3,
-    "audio": "speakYourMessage.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 75,
   "fields": {
     "parent": 26,
@@ -1130,7 +973,7 @@
   "fields": {
     "parent": 28,
     "language": 2,
-    "audio": "welcome_registration_checker_en_kZyK8pf.wav"
+    "audio": "welcome_registration_checker_en.wav"
   }
 },
 {
@@ -1139,7 +982,7 @@
   "fields": {
     "parent": 28,
     "language": 3,
-    "audio": "welcome_registration_checker_fr_QRDNAVL.wav"
+    "audio": "welcome_registration_checker_fr.wav"
   }
 },
 {
@@ -1166,7 +1009,7 @@
   "fields": {
     "parent": 31,
     "language": 2,
-    "audio": "yes_en_tERjswT.wav"
+    "audio": "yes_en_VAukYcK.wav"
   }
 },
 {
@@ -1175,7 +1018,7 @@
   "fields": {
     "parent": 31,
     "language": 3,
-    "audio": "yes_fr_sZsiLZG.wav"
+    "audio": "yes_fr_dsH9jRZ.wav"
   }
 },
 {
@@ -1184,7 +1027,7 @@
   "fields": {
     "parent": 32,
     "language": 2,
-    "audio": "no_en_DHk0Ded.wav"
+    "audio": "no_en_O92ujJH.wav"
   }
 },
 {
@@ -1193,7 +1036,7 @@
   "fields": {
     "parent": 32,
     "language": 3,
-    "audio": "no_fr_oBB3ijn.wav"
+    "audio": "no_fr_eptB6dQ.wav"
   }
 },
 {
@@ -1202,7 +1045,7 @@
   "fields": {
     "parent": 34,
     "language": 2,
-    "audio": "amount_newborns_en_lrIi9An.wav"
+    "audio": "amount_newborns_en.wav"
   }
 },
 {
@@ -1211,7 +1054,7 @@
   "fields": {
     "parent": 34,
     "language": 3,
-    "audio": "amount_newborns_fr_6CrAIzH.wav"
+    "audio": "amount_newborns_fr.wav"
   }
 },
 {
@@ -1220,7 +1063,7 @@
   "fields": {
     "parent": 35,
     "language": 2,
-    "audio": "birth_date_en_ZH5ccrX.wav"
+    "audio": "birth_date_en.wav"
   }
 },
 {
@@ -1229,7 +1072,7 @@
   "fields": {
     "parent": 35,
     "language": 3,
-    "audio": "birth_date_fr_kv4UlFe.wav"
+    "audio": "birth_date_fr.wav"
   }
 },
 {
@@ -1238,7 +1081,7 @@
   "fields": {
     "parent": 36,
     "language": 2,
-    "audio": "info_added_en_kP3xqjR.wav"
+    "audio": "info_added_en.wav"
   }
 },
 {
@@ -1247,7 +1090,7 @@
   "fields": {
     "parent": 36,
     "language": 3,
-    "audio": "info_added_fr_U0EJ2Zd.wav"
+    "audio": "info_added_fr.wav"
   }
 },
 {
@@ -1256,7 +1099,7 @@
   "fields": {
     "parent": 37,
     "language": 2,
-    "audio": "born_days_ago_en_xl47XwV.wav"
+    "audio": "born_days_ago_en.wav"
   }
 },
 {
@@ -1274,7 +1117,7 @@
   "fields": {
     "parent": 38,
     "language": 2,
-    "audio": "end_menu_en_Nip7Osd.wav"
+    "audio": "end_menu_en.wav"
   }
 },
 {
@@ -1283,7 +1126,7 @@
   "fields": {
     "parent": 38,
     "language": 3,
-    "audio": "end_menu_fr_YwJsIpg.wav"
+    "audio": "end_menu_fr.wav"
   }
 },
 {
@@ -1292,7 +1135,7 @@
   "fields": {
     "parent": 39,
     "language": 2,
-    "audio": "end_call_en_VZLzNhc.wav"
+    "audio": "end_call_en.wav"
   }
 },
 {
@@ -1301,7 +1144,7 @@
   "fields": {
     "parent": 39,
     "language": 3,
-    "audio": "end_call_fr_67WA5HD.wav"
+    "audio": "end_call_fr.wav"
   }
 },
 {
@@ -1310,7 +1153,7 @@
   "fields": {
     "parent": 40,
     "language": 2,
-    "audio": "goto_newborns_en_ofOFVCH.wav"
+    "audio": "goto_newborns_en.wav"
   }
 },
 {
@@ -1319,7 +1162,7 @@
   "fields": {
     "parent": 40,
     "language": 3,
-    "audio": "goto_newborns_fr_GrUXGE7.wav"
+    "audio": "goto_newborns_fr.wav"
   }
 },
 {
@@ -1364,7 +1207,7 @@
   "fields": {
     "parent": 43,
     "language": 2,
-    "audio": "goto_main_menu_en_0dcHynp.wav"
+    "audio": "goto_main_menu_en.wav"
   }
 },
 {
@@ -1373,7 +1216,7 @@
   "fields": {
     "parent": 43,
     "language": 3,
-    "audio": "goto_main_menu_fr_rLqplr0.wav"
+    "audio": "goto_main_menu_fr.wav"
   }
 },
 {
@@ -1382,7 +1225,7 @@
   "fields": {
     "parent": 45,
     "language": 2,
-    "audio": "say_names_en_npiYvjx.wav"
+    "audio": "say_names_en.wav"
   }
 },
 {
@@ -1391,7 +1234,7 @@
   "fields": {
     "parent": 45,
     "language": 3,
-    "audio": "say_names_fr_m5kXXSc.wav"
+    "audio": "say_names_fr.wav"
   }
 },
 {
@@ -1562,7 +1405,7 @@
   "fields": {
     "parent": 57,
     "language": 2,
-    "audio": "account_created_en_YUAu6w2.wav"
+    "audio": "account_created_en.wav"
   }
 },
 {
@@ -1571,7 +1414,7 @@
   "fields": {
     "parent": 57,
     "language": 3,
-    "audio": "account_created_fr_0bhomd6.wav"
+    "audio": "account_created_fr.wav"
   }
 },
 {
@@ -2733,10 +2576,10 @@
     "name": "Welcome and registration checker",
     "description": "Welcome user and checks if user is already registered",
     "creation_date": "2018-04-25T10:15:01.996Z",
-    "modification_date": "2018-05-01T09:24:20.824Z",
+    "modification_date": "2018-05-01T20:39:26.242Z",
     "active": true,
     "_start_element": 9,
-    "registration": "disabled",
+    "registration": "preferred",
     "registration_language": true,
     "registration_name": false,
     "supported_languages": [
@@ -2752,10 +2595,10 @@
     "name": "Account creator",
     "description": "Creates new user account",
     "creation_date": "2018-04-25T11:00:47.887Z",
-    "modification_date": "2018-04-30T18:48:43.808Z",
+    "modification_date": "2018-05-01T20:37:09.203Z",
     "active": true,
     "_start_element": 12,
-    "registration": "disabled",
+    "registration": "preferred",
     "registration_language": true,
     "registration_name": false,
     "supported_languages": [
@@ -2771,7 +2614,7 @@
     "name": "Main menu",
     "description": "Main menu selection",
     "creation_date": "2018-04-25T12:13:41.557Z",
-    "modification_date": "2018-04-30T23:22:23.761Z",
+    "modification_date": "2018-05-01T20:37:17.295Z",
     "active": true,
     "_start_element": 18,
     "registration": "preferred",
@@ -2961,7 +2804,7 @@
   "pk": 8,
   "fields": {
     "start": "2018-04-30T17:43:08.961Z",
-    "end": "2018-04-30T23:22:47.610Z",
+    "end": "2018-05-01T11:22:52.500Z",
     "user": 2,
     "caller_id": "123",
     "service": 2,
@@ -2989,6 +2832,162 @@
     "user": null,
     "caller_id": null,
     "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 11,
+  "fields": {
+    "start": "2018-05-01T11:24:24.525Z",
+    "end": "2018-05-01T11:24:25.158Z",
+    "user": 2,
+    "caller_id": "123",
+    "service": 2,
+    "_language": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 12,
+  "fields": {
+    "start": "2018-05-01T11:24:32.958Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 3,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 13,
+  "fields": {
+    "start": "2018-05-01T11:24:40.335Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 4,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 14,
+  "fields": {
+    "start": "2018-05-01T13:57:03.896Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 5,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 15,
+  "fields": {
+    "start": "2018-05-01T13:57:24.664Z",
+    "end": "2018-05-01T13:57:26.424Z",
+    "user": 2,
+    "caller_id": "123",
+    "service": 2,
+    "_language": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 16,
+  "fields": {
+    "start": "2018-05-01T13:57:44.708Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 3,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 17,
+  "fields": {
+    "start": "2018-05-01T13:58:07.118Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 4,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 18,
+  "fields": {
+    "start": "2018-05-01T13:58:21.163Z",
+    "end": null,
+    "user": null,
+    "caller_id": "1",
+    "service": 4,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 19,
+  "fields": {
+    "start": "2018-05-01T13:58:39.431Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 4,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 20,
+  "fields": {
+    "start": "2018-05-01T20:35:03.069Z",
+    "end": "2018-05-01T20:35:03.631Z",
+    "user": 2,
+    "caller_id": "123",
+    "service": 2,
+    "_language": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 21,
+  "fields": {
+    "start": "2018-05-01T20:35:16.813Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 3,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 22,
+  "fields": {
+    "start": "2018-05-01T20:35:24.225Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 4,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 23,
+  "fields": {
+    "start": "2018-05-01T20:35:33.321Z",
+    "end": null,
+    "user": null,
+    "caller_id": "123",
+    "service": 5,
     "_language": null
   }
 },
@@ -3119,6 +3118,46 @@
     "time": "2018-04-30T23:22:47.739Z",
     "session": 8,
     "_visited_element": 18,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 14,
+  "fields": {
+    "time": "2018-05-01T11:22:52.631Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 15,
+  "fields": {
+    "time": "2018-05-01T11:24:25.304Z",
+    "session": 11,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 16,
+  "fields": {
+    "time": "2018-05-01T13:57:26.808Z",
+    "session": 15,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 17,
+  "fields": {
+    "time": "2018-05-01T20:35:03.756Z",
+    "session": 20,
+    "_visited_element": 9,
     "description": null
   }
 },
