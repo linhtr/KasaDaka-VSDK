@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vxml version="2.1" xmlns="http://www.w3.org/2001/vxml">
- 	<menu id="welcomeMenu" dtmf="true"> 		
+ 	<menu id="welcome_menu" dtmf="true"> 		
 		<prompt>
-			Hello farmer! Welcome to our chicken vaccination programm. Are you already registered?
+			Hello farmer! Welcome to our chicken vaccination program. Are you already registered?
 			Press 1, for yes.
  			Press 2, for no.
 		</prompt>
@@ -250,7 +250,7 @@
 		</field>
 		<field name="vaccination_date">
 			<prompt>
-			Are you chickens vaccinated today? If yes, press 1. If no, press 2.
+			Are your chickens vaccinated today? If yes, press 1. If no, press 2.
 			</prompt>
 			<option dtmf="1">yes</option>
 			<option dtmf="2">no</option>
@@ -335,7 +335,7 @@
 	
 
 	<form id="noaccount">
-		<field name="register">
+		<field name="registration">
 			<prompt>
 			Let's make an account. Please say your first and last name.
 			</prompt>
