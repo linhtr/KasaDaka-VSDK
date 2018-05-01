@@ -241,14 +241,6 @@
 },
 {
   "model": "service_development.voicelabel",
-  "pk": 33,
-  "fields": {
-    "name": "Please say your first and last names.",
-    "description": null
-  }
-},
-{
-  "model": "service_development.voicelabel",
   "pk": 34,
   "fields": {
     "name": "How many newborns?",
@@ -325,6 +317,94 @@
   "fields": {
     "name": "We will send you back to the main menu.",
     "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 45,
+  "fields": {
+    "name": "To create an account.",
+    "description": "To create an account, please say your first and last name."
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 47,
+  "fields": {
+    "name": "What disease?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 48,
+  "fields": {
+    "name": "Amount infected?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 49,
+  "fields": {
+    "name": "Thank report disease.",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 50,
+  "fields": {
+    "name": "Another disease?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 51,
+  "fields": {
+    "name": "Alright, thank you.",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 52,
+  "fields": {
+    "name": "Amount vaccinated?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 53,
+  "fields": {
+    "name": "Vaccinated today?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 54,
+  "fields": {
+    "name": "Thank report vaccination",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 55,
+  "fields": {
+    "name": "How many days ago were your chicken vaccinated?",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 57,
+  "fields": {
+    "name": "Account created",
+    "description": "You have just created an account."
   }
 },
 {
@@ -1050,7 +1130,7 @@
   "fields": {
     "parent": 28,
     "language": 2,
-    "audio": "welcome_registration_checker_en_LHLJE9e.wav"
+    "audio": "welcome_registration_checker_en_kZyK8pf.wav"
   }
 },
 {
@@ -1059,7 +1139,7 @@
   "fields": {
     "parent": 28,
     "language": 3,
-    "audio": "welcome_registration_checker_fr_6Xq4oPC.wav"
+    "audio": "welcome_registration_checker_fr_QRDNAVL.wav"
   }
 },
 {
@@ -1118,29 +1198,11 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 89,
-  "fields": {
-    "parent": 33,
-    "language": 2,
-    "audio": "say_names_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 90,
-  "fields": {
-    "parent": 33,
-    "language": 3,
-    "audio": "say_names_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 91,
   "fields": {
     "parent": 34,
     "language": 2,
-    "audio": "amount_newborns_en.wav"
+    "audio": "amount_newborns_en_lrIi9An.wav"
   }
 },
 {
@@ -1149,7 +1211,7 @@
   "fields": {
     "parent": 34,
     "language": 3,
-    "audio": "amount_newborns_fr.wav"
+    "audio": "amount_newborns_fr_6CrAIzH.wav"
   }
 },
 {
@@ -1158,7 +1220,7 @@
   "fields": {
     "parent": 35,
     "language": 2,
-    "audio": "birth_date_en.wav"
+    "audio": "birth_date_en_ZH5ccrX.wav"
   }
 },
 {
@@ -1167,7 +1229,7 @@
   "fields": {
     "parent": 35,
     "language": 3,
-    "audio": "birth_date_fr.wav"
+    "audio": "birth_date_fr_kv4UlFe.wav"
   }
 },
 {
@@ -1176,7 +1238,7 @@
   "fields": {
     "parent": 36,
     "language": 2,
-    "audio": "info_added_en.wav"
+    "audio": "info_added_en_kP3xqjR.wav"
   }
 },
 {
@@ -1185,7 +1247,7 @@
   "fields": {
     "parent": 36,
     "language": 3,
-    "audio": "info_added_fr.wav"
+    "audio": "info_added_fr_U0EJ2Zd.wav"
   }
 },
 {
@@ -1194,7 +1256,7 @@
   "fields": {
     "parent": 37,
     "language": 2,
-    "audio": "born_days_ago_en.wav"
+    "audio": "born_days_ago_en_xl47XwV.wav"
   }
 },
 {
@@ -1203,7 +1265,7 @@
   "fields": {
     "parent": 37,
     "language": 3,
-    "audio": "birth_date_fr_sw5LEtb.wav"
+    "audio": "born_days_ago_fr.wav"
   }
 },
 {
@@ -1212,7 +1274,7 @@
   "fields": {
     "parent": 38,
     "language": 2,
-    "audio": "end_menu_en.wav"
+    "audio": "end_menu_en_Nip7Osd.wav"
   }
 },
 {
@@ -1221,7 +1283,7 @@
   "fields": {
     "parent": 38,
     "language": 3,
-    "audio": "end_menu_fr.wav"
+    "audio": "end_menu_fr_YwJsIpg.wav"
   }
 },
 {
@@ -1230,7 +1292,7 @@
   "fields": {
     "parent": 39,
     "language": 2,
-    "audio": "end_call_en.wav"
+    "audio": "end_call_en_VZLzNhc.wav"
   }
 },
 {
@@ -1239,7 +1301,7 @@
   "fields": {
     "parent": 39,
     "language": 3,
-    "audio": "end_call_fr.wav"
+    "audio": "end_call_fr_67WA5HD.wav"
   }
 },
 {
@@ -1248,7 +1310,7 @@
   "fields": {
     "parent": 40,
     "language": 2,
-    "audio": "goto_newborns_en.wav"
+    "audio": "goto_newborns_en_ofOFVCH.wav"
   }
 },
 {
@@ -1257,7 +1319,7 @@
   "fields": {
     "parent": 40,
     "language": 3,
-    "audio": "goto_newborns_fr.wav"
+    "audio": "goto_newborns_fr_GrUXGE7.wav"
   }
 },
 {
@@ -1302,7 +1364,7 @@
   "fields": {
     "parent": 43,
     "language": 2,
-    "audio": "goto_main_menu_en.wav"
+    "audio": "goto_main_menu_en_0dcHynp.wav"
   }
 },
 {
@@ -1311,7 +1373,205 @@
   "fields": {
     "parent": 43,
     "language": 3,
-    "audio": "goto_main_menu_fr.wav"
+    "audio": "goto_main_menu_fr_rLqplr0.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 113,
+  "fields": {
+    "parent": 45,
+    "language": 2,
+    "audio": "say_names_en_npiYvjx.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 114,
+  "fields": {
+    "parent": 45,
+    "language": 3,
+    "audio": "say_names_fr_m5kXXSc.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 117,
+  "fields": {
+    "parent": 47,
+    "language": 2,
+    "audio": "what_disease_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 118,
+  "fields": {
+    "parent": 47,
+    "language": 3,
+    "audio": "what_disease_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 119,
+  "fields": {
+    "parent": 48,
+    "language": 2,
+    "audio": "amount_infected_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 120,
+  "fields": {
+    "parent": 48,
+    "language": 3,
+    "audio": "amount_infected_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 121,
+  "fields": {
+    "parent": 49,
+    "language": 2,
+    "audio": "thank_report_disease_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 122,
+  "fields": {
+    "parent": 49,
+    "language": 3,
+    "audio": "thank_report_disease_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 123,
+  "fields": {
+    "parent": 50,
+    "language": 2,
+    "audio": "another_disease_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 124,
+  "fields": {
+    "parent": 50,
+    "language": 3,
+    "audio": "another_disease_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 125,
+  "fields": {
+    "parent": 51,
+    "language": 2,
+    "audio": "thank_you_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 126,
+  "fields": {
+    "parent": 51,
+    "language": 3,
+    "audio": "thank_you_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 127,
+  "fields": {
+    "parent": 52,
+    "language": 2,
+    "audio": "amount_vaccinated_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 128,
+  "fields": {
+    "parent": 52,
+    "language": 3,
+    "audio": "amount_vaccinated_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 129,
+  "fields": {
+    "parent": 53,
+    "language": 2,
+    "audio": "vaccination_date_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 130,
+  "fields": {
+    "parent": 53,
+    "language": 3,
+    "audio": "vaccination_date_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 131,
+  "fields": {
+    "parent": 54,
+    "language": 2,
+    "audio": "thank_revaccination_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 132,
+  "fields": {
+    "parent": 54,
+    "language": 3,
+    "audio": "thank_revaccination_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 133,
+  "fields": {
+    "parent": 55,
+    "language": 2,
+    "audio": "vac_days_ago_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 134,
+  "fields": {
+    "parent": 55,
+    "language": 3,
+    "audio": "vac_days_ago_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 137,
+  "fields": {
+    "parent": 57,
+    "language": 2,
+    "audio": "account_created_en_YUAu6w2.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 138,
+  "fields": {
+    "parent": 57,
+    "language": 3,
+    "audio": "account_created_fr_0bhomd6.wav"
   }
 },
 {
@@ -1404,9 +1664,9 @@
   "fields": {
     "service": 2,
     "creation_date": "2018-04-25T10:30:44.522Z",
-    "modification_date": "2018-04-25T15:59:47.917Z",
-    "name": "Hello farmer! Welcome to our chicken vaccination programm. Are you already registered?",
-    "description": "",
+    "modification_date": "2018-04-30T22:57:53.500Z",
+    "name": "welcome_menu",
+    "description": "Hello farmer! Welcome to our chicken vaccination programm. Are you already registered?",
     "voice_label": 28
   }
 },
@@ -1440,7 +1700,7 @@
   "fields": {
     "service": 2,
     "creation_date": "2018-04-25T11:01:20.834Z",
-    "modification_date": "2018-04-25T15:56:00.906Z",
+    "modification_date": "2018-04-30T21:52:59.409Z",
     "name": "Let's make an account.",
     "description": "",
     "voice_label": 27
@@ -1452,8 +1712,8 @@
   "fields": {
     "service": 4,
     "creation_date": "2018-04-25T12:54:45.079Z",
-    "modification_date": "2018-04-25T17:37:48.388Z",
-    "name": "Main menu options",
+    "modification_date": "2018-04-30T20:28:51.697Z",
+    "name": "main_menu",
     "description": "Main menu with menu options.",
     "voice_label": 30
   }
@@ -1500,7 +1760,7 @@
   "fields": {
     "service": 4,
     "creation_date": "2018-04-25T13:08:11.553Z",
-    "modification_date": "2018-04-25T17:24:10.212Z",
+    "modification_date": "2018-04-30T20:30:49.455Z",
     "name": "You would like to enter newborn chicks.",
     "description": "Confirm and go to newborn chicks.",
     "voice_label": 40
@@ -1512,7 +1772,7 @@
   "fields": {
     "service": 4,
     "creation_date": "2018-04-25T13:23:28.232Z",
-    "modification_date": "2018-04-25T17:25:20.764Z",
+    "modification_date": "2018-04-30T21:53:20.418Z",
     "name": "You would like to report a disease.",
     "description": "Confirm and go to disease notification.",
     "voice_label": 41
@@ -1524,22 +1784,10 @@
   "fields": {
     "service": 4,
     "creation_date": "2018-04-25T13:25:25.934Z",
-    "modification_date": "2018-04-25T17:26:12.350Z",
+    "modification_date": "2018-04-30T23:02:51.091Z",
     "name": "You would like to enter new vaccination date.",
     "description": "Confirm and go to vaccination notification.",
     "voice_label": 42
-  }
-},
-{
-  "model": "service_development.voiceservicesubelement",
-  "pk": 26,
-  "fields": {
-    "service": 3,
-    "creation_date": "2018-04-25T15:54:59.811Z",
-    "modification_date": "2018-04-25T15:54:59.811Z",
-    "name": "To create an account, please say your first and last name.",
-    "description": "",
-    "voice_label": 33
   }
 },
 {
@@ -1548,9 +1796,9 @@
   "fields": {
     "service": 5,
     "creation_date": "2018-04-25T16:13:23.564Z",
-    "modification_date": "2018-04-25T17:45:05.349Z",
-    "name": "How many newborn chickens do you have?",
-    "description": "",
+    "modification_date": "2018-04-30T20:34:12.504Z",
+    "name": "amount_newborns",
+    "description": "How many newborn chickens do you have?",
     "voice_label": 34
   }
 },
@@ -1680,9 +1928,9 @@
   "fields": {
     "service": 5,
     "creation_date": "2018-04-25T16:21:56.398Z",
-    "modification_date": "2018-04-25T17:07:47.011Z",
-    "name": "Are your chickens born today?",
-    "description": "",
+    "modification_date": "2018-04-30T20:36:10.726Z",
+    "name": "birth_date",
+    "description": "Are your chickens born today?",
     "voice_label": 35
   }
 },
@@ -1716,9 +1964,9 @@
   "fields": {
     "service": 5,
     "creation_date": "2018-04-25T16:34:52.438Z",
-    "modification_date": "2018-04-25T17:09:40.386Z",
-    "name": "How many days ago were your chickens born?",
-    "description": "",
+    "modification_date": "2018-04-30T20:38:31.118Z",
+    "name": "born_days_ago",
+    "description": "How many days ago were your chickens born?",
     "voice_label": 37
   }
 },
@@ -1788,7 +2036,7 @@
   "fields": {
     "service": 5,
     "creation_date": "2018-04-25T16:38:52.118Z",
-    "modification_date": "2018-04-25T17:26:38.550Z",
+    "modification_date": "2018-04-30T20:37:14.427Z",
     "name": "Your information has been added to your profile.",
     "description": "",
     "voice_label": 36
@@ -1800,8 +2048,8 @@
   "fields": {
     "service": 8,
     "creation_date": "2018-04-25T17:05:04.757Z",
-    "modification_date": "2018-04-25T17:42:32.332Z",
-    "name": "End menu options",
+    "modification_date": "2018-04-30T20:42:04.438Z",
+    "name": "end_menu",
     "description": "End menu options",
     "voice_label": 38
   }
@@ -1836,7 +2084,7 @@
   "fields": {
     "service": 8,
     "creation_date": "2018-04-25T17:05:39.653Z",
-    "modification_date": "2018-04-25T17:05:39.653Z",
+    "modification_date": "2018-04-30T20:43:00.576Z",
     "name": "End call",
     "description": "Ending the call",
     "voice_label": 39
@@ -1848,10 +2096,586 @@
   "fields": {
     "service": 8,
     "creation_date": "2018-04-25T17:42:10.285Z",
-    "modification_date": "2018-04-25T17:42:10.285Z",
+    "modification_date": "2018-04-30T20:43:31.426Z",
     "name": "We will send you back to the main menu.",
     "description": "",
     "voice_label": 43
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 53,
+  "fields": {
+    "service": 3,
+    "creation_date": "2018-04-30T20:23:16.452Z",
+    "modification_date": "2018-04-30T23:15:31.172Z",
+    "name": "registration",
+    "description": "To create an account, please say your first and last name.",
+    "voice_label": 45
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 54,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T20:56:31.051Z",
+    "modification_date": "2018-04-30T21:15:05.467Z",
+    "name": "disease",
+    "description": "What disease would you like to report?",
+    "voice_label": 47
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 55,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T20:56:31.056Z",
+    "modification_date": "2018-04-30T21:15:05.472Z",
+    "name": "1",
+    "description": "Newcastle Disease",
+    "voice_label": 11
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 56,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T20:56:31.059Z",
+    "modification_date": "2018-04-30T21:15:05.473Z",
+    "name": "2",
+    "description": "Chickenpox",
+    "voice_label": 12
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 57,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T20:56:31.061Z",
+    "modification_date": "2018-04-30T21:15:05.475Z",
+    "name": "3",
+    "description": "Infectious Bronchitis",
+    "voice_label": 13
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 58,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T20:56:31.062Z",
+    "modification_date": "2018-04-30T21:15:05.476Z",
+    "name": "4",
+    "description": "Gomburu",
+    "voice_label": 14
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 59,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.506Z",
+    "modification_date": "2018-04-30T21:21:24.528Z",
+    "name": "amount_infected_chickens",
+    "description": "How many of your chickens are infected with this disease?",
+    "voice_label": 48
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 60,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.512Z",
+    "modification_date": "2018-04-30T21:21:24.533Z",
+    "name": "1",
+    "description": "1",
+    "voice_label": 11
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 61,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.515Z",
+    "modification_date": "2018-04-30T21:21:24.536Z",
+    "name": "2",
+    "description": "2",
+    "voice_label": 12
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 62,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.518Z",
+    "modification_date": "2018-04-30T21:21:24.538Z",
+    "name": "3",
+    "description": "3",
+    "voice_label": 13
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 63,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.520Z",
+    "modification_date": "2018-04-30T21:21:24.541Z",
+    "name": "4",
+    "description": "4",
+    "voice_label": 14
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 64,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.522Z",
+    "modification_date": "2018-04-30T21:21:24.543Z",
+    "name": "5",
+    "description": "5",
+    "voice_label": 15
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 65,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.524Z",
+    "modification_date": "2018-04-30T21:21:24.545Z",
+    "name": "6",
+    "description": "6",
+    "voice_label": 16
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 66,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.526Z",
+    "modification_date": "2018-04-30T21:21:24.547Z",
+    "name": "7",
+    "description": "7",
+    "voice_label": 17
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 67,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.528Z",
+    "modification_date": "2018-04-30T21:21:24.549Z",
+    "name": "8",
+    "description": "8",
+    "voice_label": 18
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 68,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.530Z",
+    "modification_date": "2018-04-30T21:21:24.551Z",
+    "name": "9",
+    "description": "9",
+    "voice_label": 19
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 69,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:14:25.532Z",
+    "modification_date": "2018-04-30T21:21:24.553Z",
+    "name": "0",
+    "description": "0",
+    "voice_label": 20
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 70,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:20:28.242Z",
+    "modification_date": "2018-04-30T21:46:52.712Z",
+    "name": "Thank you for reporting. We will make a note of this report.",
+    "description": "",
+    "voice_label": 49
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 71,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:36:14.124Z",
+    "modification_date": "2018-04-30T21:47:34.680Z",
+    "name": "another_disease",
+    "description": "Would you like to report another infection?",
+    "voice_label": 50
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 72,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:36:14.164Z",
+    "modification_date": "2018-04-30T21:36:14.164Z",
+    "name": "Yes",
+    "description": "Yes",
+    "voice_label": 31
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 73,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:36:14.166Z",
+    "modification_date": "2018-04-30T21:47:34.686Z",
+    "name": "No",
+    "description": "No",
+    "voice_label": 32
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 74,
+  "fields": {
+    "service": 6,
+    "creation_date": "2018-04-30T21:46:29.317Z",
+    "modification_date": "2018-04-30T21:46:29.317Z",
+    "name": "Alright, thank you.",
+    "description": "",
+    "voice_label": 51
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 75,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.512Z",
+    "modification_date": "2018-04-30T22:49:14.008Z",
+    "name": "amount_vaccinated",
+    "description": "How many newborn chickens did you vaccinate?",
+    "voice_label": 52
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 76,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.538Z",
+    "modification_date": "2018-04-30T22:49:14.014Z",
+    "name": "1",
+    "description": "1",
+    "voice_label": 11
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 77,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.541Z",
+    "modification_date": "2018-04-30T22:49:14.017Z",
+    "name": "2",
+    "description": "2",
+    "voice_label": 12
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 78,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.542Z",
+    "modification_date": "2018-04-30T22:49:14.019Z",
+    "name": "3",
+    "description": "3",
+    "voice_label": 13
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 79,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.544Z",
+    "modification_date": "2018-04-30T22:49:14.021Z",
+    "name": "4",
+    "description": "4",
+    "voice_label": 14
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 80,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.546Z",
+    "modification_date": "2018-04-30T22:49:14.023Z",
+    "name": "5",
+    "description": "5",
+    "voice_label": 15
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 81,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.548Z",
+    "modification_date": "2018-04-30T22:49:14.025Z",
+    "name": "6",
+    "description": "6",
+    "voice_label": 16
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 82,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.550Z",
+    "modification_date": "2018-04-30T22:49:14.028Z",
+    "name": "7",
+    "description": "7",
+    "voice_label": 17
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 83,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.552Z",
+    "modification_date": "2018-04-30T22:49:14.030Z",
+    "name": "8",
+    "description": "8",
+    "voice_label": 18
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 84,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.553Z",
+    "modification_date": "2018-04-30T22:49:14.031Z",
+    "name": "9",
+    "description": "9",
+    "voice_label": 19
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 85,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:42:47.555Z",
+    "modification_date": "2018-04-30T22:49:14.032Z",
+    "name": "0",
+    "description": "0",
+    "voice_label": 20
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 86,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:45:23.372Z",
+    "modification_date": "2018-04-30T22:55:35.152Z",
+    "name": "vaccination_date",
+    "description": "",
+    "voice_label": 53
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 87,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:45:23.377Z",
+    "modification_date": "2018-04-30T22:49:43.498Z",
+    "name": "Yes",
+    "description": "Yes",
+    "voice_label": 31
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 88,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:45:23.379Z",
+    "modification_date": "2018-04-30T22:55:35.157Z",
+    "name": "No",
+    "description": "No",
+    "voice_label": 32
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 89,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:48:08.316Z",
+    "modification_date": "2018-04-30T22:48:08.316Z",
+    "name": "Thank you for your vaccination report.",
+    "description": "",
+    "voice_label": 54
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 90,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.046Z",
+    "modification_date": "2018-04-30T22:55:21.046Z",
+    "name": "vac_days_ago",
+    "description": "How many days ago were your chicken vaccinated? Enter the number of days ago.",
+    "voice_label": 55
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 91,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.053Z",
+    "modification_date": "2018-04-30T22:55:21.053Z",
+    "name": "1",
+    "description": "1",
+    "voice_label": 11
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 92,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.057Z",
+    "modification_date": "2018-04-30T22:55:21.057Z",
+    "name": "2",
+    "description": "2",
+    "voice_label": 12
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 93,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.059Z",
+    "modification_date": "2018-04-30T22:55:21.059Z",
+    "name": "3",
+    "description": "3",
+    "voice_label": 13
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 94,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.061Z",
+    "modification_date": "2018-04-30T22:55:21.061Z",
+    "name": "4",
+    "description": "4",
+    "voice_label": 14
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 95,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.064Z",
+    "modification_date": "2018-04-30T22:55:21.064Z",
+    "name": "5",
+    "description": "5",
+    "voice_label": 15
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 96,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.066Z",
+    "modification_date": "2018-04-30T22:55:21.066Z",
+    "name": "6",
+    "description": "6",
+    "voice_label": 16
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 97,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.068Z",
+    "modification_date": "2018-04-30T22:55:21.068Z",
+    "name": "7",
+    "description": "7",
+    "voice_label": 17
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 98,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.070Z",
+    "modification_date": "2018-04-30T22:55:21.070Z",
+    "name": "8",
+    "description": "8",
+    "voice_label": 18
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 99,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.073Z",
+    "modification_date": "2018-04-30T22:55:21.073Z",
+    "name": "9",
+    "description": "9",
+    "voice_label": 19
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 100,
+  "fields": {
+    "service": 7,
+    "creation_date": "2018-04-30T22:55:21.076Z",
+    "modification_date": "2018-04-30T22:55:21.076Z",
+    "name": "0",
+    "description": "0",
+    "voice_label": 20
   }
 },
 {
@@ -1911,11 +2735,6 @@
 },
 {
   "model": "service_development.voiceserviceelement",
-  "pk": 26,
-  "fields": {}
-},
-{
-  "model": "service_development.voiceserviceelement",
   "pk": 27,
   "fields": {}
 },
@@ -1950,6 +2769,56 @@
   "fields": {}
 },
 {
+  "model": "service_development.voiceserviceelement",
+  "pk": 53,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 54,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 59,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 70,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 71,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 74,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 75,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 86,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 89,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 90,
+  "fields": {}
+},
+{
   "model": "service_development.voiceservice",
   "pk": 1,
   "fields": {
@@ -1975,10 +2844,10 @@
     "name": "Welcome and registration checker",
     "description": "Welcome user and checks if user is already registered",
     "creation_date": "2018-04-25T10:15:01.996Z",
-    "modification_date": "2018-04-25T16:00:00.651Z",
+    "modification_date": "2018-04-30T19:46:57.400Z",
     "active": true,
     "_start_element": 9,
-    "registration": "preferred",
+    "registration": "disabled",
     "registration_language": true,
     "registration_name": false,
     "supported_languages": [
@@ -1994,9 +2863,9 @@
     "name": "Account creator",
     "description": "Creates new user account",
     "creation_date": "2018-04-25T11:00:47.887Z",
-    "modification_date": "2018-04-25T13:02:26.857Z",
+    "modification_date": "2018-04-30T18:48:43.808Z",
     "active": true,
-    "_start_element": 9,
+    "_start_element": 12,
     "registration": "disabled",
     "registration_language": true,
     "registration_name": false,
@@ -2013,9 +2882,9 @@
     "name": "Main menu",
     "description": "Main menu selection",
     "creation_date": "2018-04-25T12:13:41.557Z",
-    "modification_date": "2018-04-25T13:15:06.802Z",
+    "modification_date": "2018-04-30T23:22:23.761Z",
     "active": true,
-    "_start_element": 8,
+    "_start_element": 18,
     "registration": "preferred",
     "registration_language": true,
     "registration_name": false,
@@ -2032,9 +2901,9 @@
     "name": "Newborns",
     "description": "Reporting newborn chicks.",
     "creation_date": "2018-04-25T12:47:57.935Z",
-    "modification_date": "2018-04-25T16:47:59.840Z",
+    "modification_date": "2018-04-30T21:50:03.067Z",
     "active": true,
-    "_start_element": 22,
+    "_start_element": 27,
     "registration": "preferred",
     "registration_language": true,
     "registration_name": false,
@@ -2051,9 +2920,9 @@
     "name": "Disease notification",
     "description": "Reporting chicken disease.",
     "creation_date": "2018-04-25T13:18:22.855Z",
-    "modification_date": "2018-04-25T15:03:49.516Z",
+    "modification_date": "2018-04-30T21:48:52.032Z",
     "active": true,
-    "_start_element": 23,
+    "_start_element": 54,
     "registration": "preferred",
     "registration_language": true,
     "registration_name": false,
@@ -2115,6 +2984,269 @@
   }
 },
 {
+  "model": "service_development.kasadakauser",
+  "pk": 2,
+  "fields": {
+    "caller_id": "123",
+    "first_name": "John",
+    "last_name": "Williams",
+    "creation_date": "2018-04-30T17:42:21.678Z",
+    "modification_date": "2018-04-30T17:42:21.678Z",
+    "language": 2,
+    "service": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 1,
+  "fields": {
+    "start": "2018-04-30T14:37:14.835Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 2,
+  "fields": {
+    "start": "2018-04-30T14:38:35.511Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 3,
+  "fields": {
+    "start": "2018-04-30T14:43:03.286Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 4,
+  "fields": {
+    "start": "2018-04-30T17:07:20.391Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 5,
+  "fields": {
+    "start": "2018-04-30T17:22:34.240Z",
+    "end": null,
+    "user": null,
+    "caller_id": "4",
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 6,
+  "fields": {
+    "start": "2018-04-30T17:37:03.880Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 3,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 7,
+  "fields": {
+    "start": "2018-04-30T17:38:14.917Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 5,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 8,
+  "fields": {
+    "start": "2018-04-30T17:43:08.961Z",
+    "end": "2018-04-30T23:22:47.610Z",
+    "user": 2,
+    "caller_id": "123",
+    "service": 2,
+    "_language": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 9,
+  "fields": {
+    "start": "2018-04-30T17:57:29.494Z",
+    "end": "2018-04-30T17:57:30.218Z",
+    "user": 2,
+    "caller_id": "123",
+    "service": 2,
+    "_language": 2
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 10,
+  "fields": {
+    "start": "2018-04-30T18:34:12.570Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 1,
+  "fields": {
+    "time": "2018-04-30T17:43:09.839Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 2,
+  "fields": {
+    "time": "2018-04-30T17:57:30.354Z",
+    "session": 9,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 3,
+  "fields": {
+    "time": "2018-04-30T18:01:34.560Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 4,
+  "fields": {
+    "time": "2018-04-30T18:34:39.319Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 5,
+  "fields": {
+    "time": "2018-04-30T18:43:37.876Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 6,
+  "fields": {
+    "time": "2018-04-30T18:44:13.976Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 7,
+  "fields": {
+    "time": "2018-04-30T18:44:38.502Z",
+    "session": 8,
+    "_visited_element": 8,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 8,
+  "fields": {
+    "time": "2018-04-30T18:44:54.054Z",
+    "session": 8,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 9,
+  "fields": {
+    "time": "2018-04-30T18:49:40.927Z",
+    "session": 8,
+    "_visited_element": 12,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 10,
+  "fields": {
+    "time": "2018-04-30T18:49:59.480Z",
+    "session": 8,
+    "_visited_element": 12,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 11,
+  "fields": {
+    "time": "2018-04-30T23:18:47.952Z",
+    "session": 8,
+    "_visited_element": 12,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 12,
+  "fields": {
+    "time": "2018-04-30T23:19:08.242Z",
+    "session": 8,
+    "_visited_element": 8,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 13,
+  "fields": {
+    "time": "2018-04-30T23:22:47.739Z",
+    "session": 8,
+    "_visited_element": 18,
+    "description": null
+  }
+},
+{
   "model": "service_development.choice",
   "pk": 2,
   "fields": {}
@@ -2147,6 +3279,36 @@
 {
   "model": "service_development.choice",
   "pk": 48,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 54,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 59,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 71,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 75,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 86,
+  "fields": {}
+},
+{
+  "model": "service_development.choice",
+  "pk": 90,
   "fields": {}
 },
 {
@@ -2358,6 +3520,310 @@
   }
 },
 {
+  "model": "service_development.choiceoption",
+  "pk": 55,
+  "fields": {
+    "parent": 54,
+    "_redirect": 59
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 56,
+  "fields": {
+    "parent": 54,
+    "_redirect": 59
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 57,
+  "fields": {
+    "parent": 54,
+    "_redirect": 59
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 58,
+  "fields": {
+    "parent": 54,
+    "_redirect": 59
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 60,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 61,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 62,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 63,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 64,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 65,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 66,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 67,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 68,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 69,
+  "fields": {
+    "parent": 59,
+    "_redirect": 70
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 72,
+  "fields": {
+    "parent": 71,
+    "_redirect": 54
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 73,
+  "fields": {
+    "parent": 71,
+    "_redirect": 74
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 76,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 77,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 78,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 79,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 80,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 81,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 82,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 83,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 84,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 85,
+  "fields": {
+    "parent": 75,
+    "_redirect": 86
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 87,
+  "fields": {
+    "parent": 86,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 88,
+  "fields": {
+    "parent": 86,
+    "_redirect": 90
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 91,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 92,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 93,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 94,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 95,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 96,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 97,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 98,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 99,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 100,
+  "fields": {
+    "parent": 90,
+    "_redirect": 89
+  }
+},
+{
   "model": "service_development.messagepresentation",
   "pk": 5,
   "fields": {
@@ -2394,7 +3860,7 @@
   "pk": 12,
   "fields": {
     "final_element": false,
-    "_redirect": 26
+    "_redirect": 53
   }
 },
 {
@@ -2410,7 +3876,7 @@
   "pk": 23,
   "fields": {
     "final_element": false,
-    "_redirect": null
+    "_redirect": 54
   }
 },
 {
@@ -2418,15 +3884,7 @@
   "pk": 24,
   "fields": {
     "final_element": false,
-    "_redirect": null
-  }
-},
-{
-  "model": "service_development.messagepresentation",
-  "pk": 26,
-  "fields": {
-    "final_element": false,
-    "_redirect": 8
+    "_redirect": 75
   }
 },
 {
@@ -2451,6 +3909,55 @@
   "fields": {
     "final_element": false,
     "_redirect": 18
+  }
+},
+{
+  "model": "service_development.messagepresentation",
+  "pk": 70,
+  "fields": {
+    "final_element": false,
+    "_redirect": 71
+  }
+},
+{
+  "model": "service_development.messagepresentation",
+  "pk": 74,
+  "fields": {
+    "final_element": false,
+    "_redirect": 51
+  }
+},
+{
+  "model": "service_development.messagepresentation",
+  "pk": 89,
+  "fields": {
+    "final_element": false,
+    "_redirect": 48
+  }
+},
+{
+  "model": "service_development.userinputcategory",
+  "pk": 1,
+  "fields": {
+    "name": "User registrations",
+    "description": "New user registrations",
+    "service": 3
+  }
+},
+{
+  "model": "service_development.record",
+  "pk": 53,
+  "fields": {
+    "not_heard_voice_label": null,
+    "barge_in": false,
+    "repeat_recording_to_caller": false,
+    "repeat_voice_label": null,
+    "ask_confirmation": false,
+    "ask_confirmation_voice_label": null,
+    "final_voice_label": 57,
+    "input_category": 1,
+    "max_time_input": 180,
+    "_redirect": 8
   }
 }
 ]
