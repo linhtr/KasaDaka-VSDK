@@ -1,0 +1,19 @@
+{% extends "base.xml" %}
+{% block content %}
+{% macro enterDtmfValue(fieldName,minInputLength,maxInputLength,interfaceAudioDir,questionAudio,goto) %}
+<form id="{{ fieldName }}_form">
+{# Here the minimum and maximum number of digits to be entered are defined. The result is saved in a variable. #}
+  <field name="{{ fieldName }}_field" type="digits?minlength={{ minInputLength }};maxlength={{ maxInputLength }}">
+    <prompt>
+    	<audio src="{{ interfaceAudioDir ~ questionAudio }}"/>
+    </prompt>
+    <filled>
+    {# saves the input to a variable with the name given, to be submitted later #}
+   		<assign name="{{fieldName}}" expr="{{ fieldName }}_field"/>
+		{# forward the user to the given goto form #}
+		<goto next="#{{ goto }}_form"/>
+    </filled>
+  </field>
+</form>
+{% endmacro %}
+{% endblock %}
