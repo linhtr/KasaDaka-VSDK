@@ -1,19 +1,51 @@
 {% extends "base.xml" %}
 {% block content %}
 {% macro enterDtmfValue(fieldName,minInputLength,maxInputLength,interfaceAudioDir,questionAudio,goto) %}
-<form id="{{ fieldName }}_form">
+<!-- <form id="{{ fieldName }}_form"> -->
+<form id="{{ digits.name|slugify }}">
 {# Here the minimum and maximum number of digits to be entered are defined. The result is saved in a variable. #}
-  <field name="{{ fieldName }}_field" type="digits?minlength={{ minInputLength }};maxlength={{ maxInputLength }}">
-    <prompt>
-    	<audio src="{{ interfaceAudioDir ~ questionAudio }}"/>
-    </prompt>
-    <filled>
-    {# saves the input to a variable with the name given, to be submitted later #}
-   		<assign name="{{fieldName}}" expr="{{ fieldName }}_field"/>
-		{# forward the user to the given goto form #}
-		<goto next="#{{ goto }}_form"/>
-    </filled>
-  </field>
+  	<field name="digits_field" type="digits?minlength=1;maxlength=10">
+	    <prompt>
+	    	<audio src="{{ digits_voice_label }}"/>
+	    </prompt>
+	    <noinput>
+	     	<audio src="{{ no_digits_voice_label }}"/>
+	      	<reprompt/>
+	    </noinput>
+
+	    <filled>
+		    
+	        <prompt>
+	        {% if filled.repeat_digits_to_caller %}
+	        	<audio src="{{ repeat_digits_voice_label }}"/> <audio expr="digits_field"/>
+	        {% endif %}
+	        {%  if filled.ask_confirmation %}
+	        	<audio src="{{ask_confirmation_digits_voice_label}}"/>
+	        </prompt>
+	        <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
+	          	<rule id="MYRULE" scope = "public">
+	                <one-of>
+	                    <item>1</item>
+	                    <item>2</item>
+	                </one-of>
+	           	</rule>
+	        </grammar>
+	        
+            <if cond="confirm == '1'">
+            	{# saves the input to a variable with the name given, to be submitted later #}
+                <assign name="redirect" expr="'{{ redirect_url }}'"/>
+                <submit next="{{ url }}" enctype="multipart/form-data" method="post" namelist="redirect digits"/>
+                {# forward the user to the given goto form #}
+				<goto next="#{{ goto }}_form"/>
+           	</if>
+            <if cond="confirm == '2'">
+            	<goto next="{{ url }}"/>
+           	</if>
+	        {% endif %}
+
+        </filled>
+	</field>
+    
 </form>
 {% endmacro %}
 {% endblock %}

@@ -9,3 +9,4 @@ from .vse_record import *
 from .user_input import *
 from .disease import *
 from .usersdiseases import *
+from .vse_digits import *

@@ -113,7 +113,7 @@ batch_id<y:LabelModel>
           <y:Geometry height="107.0" width="129.0" x="282.5703070980595" y="418.86750778271505"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" modelName="custom" textColor="#000000" visible="true" width="63.583984375" x="32.7080078125" y="16.16796875">DISESASES
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" modelName="custom" textColor="#000000" visible="true" width="63.583984375" x="32.7080078125" y="16.16796875">DISEASES
 id
 user_id
 disease
