@@ -5,5 +5,3 @@ from .vse_record import *
 from .user import *
 from .voiceservice import *
 from .language import *
-from .disease import *
-from .vse_digits import *

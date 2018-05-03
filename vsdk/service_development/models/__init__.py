@@ -1,4 +1,4 @@
-from .voiceservice import *
+from .voiceservice import * 
 from .voicelabel import *
 from .user import *
 from .session import *
@@ -7,6 +7,3 @@ from .vse_choice import *
 from .vse_message import *
 from .vse_record import *
 from .user_input import *
-from .disease import *
-from .usersdiseases import *
-from .vse_digits import *
