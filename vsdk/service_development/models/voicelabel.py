@@ -24,7 +24,7 @@ class VoiceLabel(models.Model):
     is_valid.short_description = _('Is valid')
 
     def validator(self, language):
-        errors = []        
+        errors = []
         if len(self.voicefragment_set.filter(language = language)) > 0:
             errors.extend(self.voicefragment_set.filter(language=language)[0].validator())
         else:
@@ -112,6 +112,36 @@ class Language(models.Model):
             verbose_name = ugettext("The number %(number)s")% {'number':'0'},
             related_name = 'language_zero',
             help_text = ugettext("The number %(number)s")% {'number':'0'})
+    ask_name = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Ask name'),
+            related_name = 'language_ask_name',
+            help_text = _("The voice label used to ask user for their name"),
+            null = True)
+    ask_confirmation = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Ask Confirmation'),
+            related_name = 'ask_confirmation',
+            help_text = _("The voice label that asks the user to confirm their input. Example: 'Are you satisfied with your recording? Press 1 to confirm, or press 2 to retry.'"),
+            null = True)
+    repeat = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Repeat'),
+            related_name = 'language_repeat',
+            help_text = _("The voice label that is played before the system repeats the user input. Example: 'Your message is:'"),
+            null = True)
+    final = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Final'),
+            related_name = 'language_final',
+            help_text = _("The voice label that is played when the user has completed the recording process. Example: 'Thank you for your message! The message has been stored successfully.'"),
+            null = True)
+    did_not_hear = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Did not hear'),
+            related_name = 'language_did_not_hear',
+            help_text = _("The voice label that is played when the system does not recognize the user saying anything. Example: 'We did not hear anything, please speak your message.'"),
+            null = True)
 
     class Meta:
         verbose_name = _('Language')
@@ -158,12 +188,16 @@ class Language(models.Model):
                 'select_language':self.select_language,
                 'pre_choice_option':self.pre_choice_option,
                 'post_choice_option':self.post_choice_option,
+                'ask_name':self.ask_name,
+                'ask_confirmation':self.ask_confirmation,
+                'repeat':self.repeat,
+                'final':self.final,
+                'did_not_hear':self.did_not_hear,
                 }
+
         for k, v in interface_voice_labels.items():
             interface_voice_labels[k] = v.get_voice_fragment_url(self)
         return interface_voice_labels
-
-
 
 class VoiceFragment(models.Model):
     parent = models.ForeignKey('VoiceLabel',
@@ -189,8 +223,8 @@ class VoiceFragment(models.Model):
         new_file_name = self.audio.path[:-4] + "_conv.wav"
         subprocess.getoutput("sox -S %s -r 8k -b 16 -c 1 -e signed-integer %s"% (self.audio.path, new_file_name))
         self.audio = basename(new_file_name)
-        
-        
+
+
 
 
     def save(self, *args, **kwargs):
@@ -198,7 +232,7 @@ class VoiceFragment(models.Model):
         from vsdk import settings
         if  settings.KASADAKA:
             format_correct = validate_audio_file_format(self.audio)
-            if not format_correct: 
+            if not format_correct:
                 self.convert_wav_to_correct_format()
         super(VoiceFragment, self).save(*args, **kwargs)
 
@@ -246,5 +280,3 @@ class VoiceFragment(models.Model):
             return mark_safe(player_string)
 
     audio_file_player.short_description = _('Audio file player')
-
-

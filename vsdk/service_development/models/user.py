@@ -21,6 +21,7 @@ class KasaDakaUser(models.Model):
     modification_date = models.DateTimeField(_('Date last modified'),auto_now = True)
     language = models.ForeignKey(Language,on_delete = models.SET_NULL, null = True)
     service = models.ForeignKey(VoiceService, on_delete = models.CASCADE)
+    name_voice = models.ForeignKey('SpokenUserInput', on_delete = models.CASCADE, null=True)
 
     class Meta:
         verbose_name = _('KasaDaka User')

@@ -17,15 +17,24 @@ class KasaDakaUserRegistration(TemplateView):
         """
         caller_id = session.caller_id
         #register the user and link the session to the user
-        user = KasaDakaUser(caller_id = caller_id,
-                service = session.service)
+        user, created = KasaDakaUser.objects.get_or_create(caller_id=caller_id, service=session.service)
+        # user = KasaDakaUser(caller_id = caller_id, service = session.service)
         if session.service.registration_language:
             user.language = session.language
-        #if session.service.registration_name:
-        #    pass
+
+        # if session.service.registration_name:
+        #    user.name_voice =
+        # TODO: name_voice opslaan ofzo
 
         user.save()
         session.link_to_user(user)
+        redirect_url = reverse('service-development:user-registration', args =[session.id])
+
+        if session.service.registration_name and session.user.name_voice == None: #where name_voice is the SpokenUserInput
+            print(base.redirect_add_get_parameters('service-development:record_name', user.id, session.id,
+                    redirect_url = redirect_url), "\n")
+            return base.redirect_add_get_parameters('service-development:record_name', user.id, session.id,
+                    redirect_url = redirect_url)
 
         session.record_step(None, "Registered as user: %s" % str(user))
         return
@@ -36,16 +45,13 @@ class KasaDakaUserRegistration(TemplateView):
         process, and redirects to the final registration when all elements have
         been filled.
         """
+
         # Always redirect back to registration process
         redirect_url = reverse('service-development:user-registration', args =[session.id])
         if session.service.registration_language and session.language == None:
             return base.redirect_add_get_parameters('service-development:language-selection', session.id,
                     redirect_url = redirect_url)
 
-        #TODO: dit verder uitwerken, user bestaat natuurlijk nog niet dus daar kun je niet checken.
-        #if session.service.registration_name and session.user.name_voice == None: #where name_voice is the wav file
-            # go to user name voice prompt
-        #    pass
 
         # If all required elements are present, finalize registration by creating a new user
         self.create_new_user(request, session)

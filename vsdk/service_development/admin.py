@@ -16,7 +16,7 @@ def format_validation_result(obj):
 
 class VoiceServiceAdmin(admin.ModelAdmin):
     fieldsets = [(_('General'),    {'fields' : ['name', 'description', 'vxml_url', 'active', 'is_valid', 'validation_details', 'supported_languages']}),
-                    (_('Registration process'), {'fields': ['registration', 'registration_language']}),
+                    (_('Registration process'), {'fields': ['registration', 'registration_language', 'registration_name']}),
                     (_('Call flow'), {'fields': ['_start_element']})]
     list_display = ('name','active')
     readonly_fields = ('vxml_url', 'is_valid', 'validation_details')
@@ -173,7 +173,7 @@ class KasaDakaUsersDiseasesAdminInline(admin.TabularInline):
 
 class KasaDakaUserAdmin(admin.ModelAdmin):
     list_filter = ['service','language','caller_id']
-    list_display = ('__str__','caller_id', 'service', 'language')
+    list_display = ('__str__','caller_id', 'service', 'language', 'name_voice')
     inlines = [KasaDakaUsersDiseasesAdminInline]
 
 
@@ -201,4 +201,4 @@ admin.site.register(Disease)
 admin.site.register(VoiceLabel, VoiceLabelAdmin)
 admin.site.register(SpokenUserInput, SpokenUserInputAdmin)
 admin.site.register(UserInputCategory)
-admin.site.register(Record)
+# admin.site.register(Record)
