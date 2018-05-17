@@ -25,7 +25,7 @@ def record_generate_context(session, redirect_url):
     repeat_recording_to_caller = True
     ask_confirmation = True
     max_time_input = 180
-
+    barge_in = True
 
     context = {
                'redirect_url': redirect_url,
@@ -36,7 +36,8 @@ def record_generate_context(session, redirect_url):
                'did_not_hear_voice_label' : did_not_hear_voice_label,
                'max_time_input' : max_time_input,
                'repeat_recording_to_caller' : repeat_recording_to_caller,
-               'ask_confirmation' : ask_confirmation
+               'ask_confirmation' : ask_confirmation,
+               'barge_in' : barge_in
                }
 
     return context
