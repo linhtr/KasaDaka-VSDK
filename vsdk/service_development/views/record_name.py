@@ -25,7 +25,7 @@ def record_generate_context(session, redirect_url):
     repeat_recording_to_caller = True
     ask_confirmation = True
     max_time_input = 180
-    barge_in = True
+    barge_in = False
 
     context = {
                'redirect_url': redirect_url,

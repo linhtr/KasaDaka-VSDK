@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 
+
 from .voicelabel import VoiceLabel
 
 class Disease(models.Model):
@@ -12,6 +13,10 @@ class Disease(models.Model):
             null = True,
             blank = True,
             )
+    has_vaccinations = models.BooleanField(null = False, default = True)
+    vaccinations_needed_amount = models.IntegerField(null = False, default = 1)
+    vaccinate_days_after_birth = models.IntegerField(null = False, default = 7)
+    vaccinations_days_between  = models.IntegerField(null = False, default = 7)
 
     def __str__(self):
         return self.name
@@ -34,7 +39,6 @@ class Disease(models.Model):
         else:
             errors.append(ugettext('No VoiceLabel in: "%s"')%str(self))
         return errors
-
 
     def get_voice_fragment_url(self, language):
         """
