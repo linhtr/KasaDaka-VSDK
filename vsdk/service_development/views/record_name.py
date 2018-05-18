@@ -2,10 +2,6 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404, redirec
 
 from ..models import *
 
-
-# def record_get_redirect_url(record_element, session):
-#     return record_element.redirect.get_absolute_url(session)
-
 def record_generate_context(session, redirect_url):
     language = session.language
 
@@ -66,14 +62,8 @@ def record_name(request, user_id, session_id):
         user.name_voice = result
         user.save ()
 
-        #if record_element.map_to_call_session_property in vars(session).keys():
-        #    setattr(session, record_element.map_to_call_session_property, value)
-
         # redirect to next element
         return redirect(request.POST['redirect'])
-
-
-    # session.record_step(record_element)
 
     context = record_generate_context(session, redirect_url)
 

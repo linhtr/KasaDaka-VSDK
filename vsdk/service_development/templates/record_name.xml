@@ -2,31 +2,25 @@
 {% block content %}
 
 <form id="record_form">
+	<record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
+		<prompt>
+		<audio src="{{ voice_label }}"/>
+		</prompt>
+	    <noinput>
+	         <audio src="{{ did_not_hear_voice_label }}"/>
+	         <reprompt/>
+	    </noinput>
+	</record>
 
-	<record name="recording" beep="true" maxtime="{{ max_time_input }}s"
-  finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
-	<prompt>
-	<audio src="{{ voice_label }}"/>
-	</prompt>
-
-    <noinput>
-         <audio src="{{ did_not_hear_voice_label }}"/>
-         <reprompt/>
-    </noinput>
-
-</record>
-
-{% if repeat_recording_to_caller %}
+	{% if repeat_recording_to_caller %}
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
-{% endif %}
+	{% endif %}
 
-
-{%  if ask_confirmation %}
-
+	{%  if ask_confirmation %}
     <field name="confirm">
         <prompt>
         <audio src="{{ask_confirmation_voice_label}}"/>
@@ -46,26 +40,19 @@
                   </prompt>
                   <assign name="redirect" expr="'{{ redirect_url }}'"/>
                   <submit next="{{ url }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
-           </if>
+           	  </if>
               <if cond="confirm == '2'">
-            <goto next="{{ url }}"/>
-           </if>
+	            <goto next="{{ url }}"/>
+	           </if>
           </filled>
  	</field>
 
 {% endif %}
-
-
 	<block>
 	    <prompt>
 	        <audio src="{{final_voice_label}}"/>
 	        <goto next="{{ redirect_url }}" />
 	    </prompt>
 	</block>
-
-
-
-
 </form>
-
 {% endblock %}

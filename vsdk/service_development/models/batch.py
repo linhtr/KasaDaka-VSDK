@@ -32,11 +32,15 @@ class Batch(models.Model):
 
     def schedule_vaccinations(self):
         for disease in Disease.objects.filter(has_vaccinations=True):
+
+            # make the first vaccination
             vaccination = Vaccination.objects.create(
                 batch = self,
                 disease = disease,
                 date_scheduled = self.date+timedelta(days=disease.vaccinate_days_after_birth)
             )
+
+            # generate the refill vaccinations
             for i in range(disease.vaccinations_refills):
                 vaccination = Vaccination.objects.create(
                     batch = self,
