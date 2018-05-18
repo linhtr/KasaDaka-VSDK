@@ -85,13 +85,16 @@ amount<y:LabelModel>
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="80.76200103759766" width="147.0" x="398.91137151117823" y="0.0"/>
+          <y:Geometry height="94.0" width="147.0" x="460.41137151117823" y="-13.237998962402344"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="60.53125" modelName="custom" textColor="#000000" visible="true" width="90.361328125" x="28.3193359375" y="10.115375518798828">VACCINATION:
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="88.796875" modelName="custom" textColor="#000000" visible="true" width="94.45703125" x="26.271484375" y="2.6015625">VACCINATION:
 id
-date given
-batch_id<y:LabelModel>
+batch_id
+disease_id
+date_scheduled
+date_given
+<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -105,12 +108,16 @@ batch_id<y:LabelModel>
     <node id="n4">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="72.38100051879883" width="90.0" x="432.91137151117823" y="503.2848613199083"/>
+          <y:Geometry height="118.0" width="202.0" x="432.91137151117823" y="503.28486131990826"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="custom" textColor="#000000" visible="true" width="57.12109375" x="16.439453125" y="12.991281509399357">DISEASES
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="102.9296875" modelName="custom" textColor="#000000" visible="true" width="174.759765625" x="13.6201171875" y="7.53515625">DISEASES
 id
-disease<y:LabelModel>
+disease
+has_vaccinations
+vaccinations_needed_amount
+vaccinate_time_after_birth
+vaccinations_time_between<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -172,7 +179,6 @@ amount<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n4" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -183,6 +189,16 @@ amount<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n5" target="n1">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n3" target="n4">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
