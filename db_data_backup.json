@@ -17,9 +17,33 @@
 },
 {
   "model": "service_development.voicelabel",
+  "pk": 3,
+  "fields": {
+    "name": "This is the truth",
+    "description": ""
+  }
+},
+{
+  "model": "service_development.voicelabel",
   "pk": 4,
   "fields": {
     "name": "English language",
+    "description": ""
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 5,
+  "fields": {
+    "name": "Thank you for using this service",
+    "description": ""
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 6,
+  "fields": {
+    "name": "Wow, it must be a really boring guy!",
     "description": ""
   }
 },
@@ -149,6 +173,22 @@
   "fields": {
     "name": "No account",
     "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 23,
+  "fields": {
+    "name": "Does the king like to drink beer?",
+    "description": ""
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 25,
+  "fields": {
+    "name": "Please speak your message",
+    "description": ""
   }
 },
 {
@@ -368,6 +408,30 @@
   }
 },
 {
+  "model": "service_development.voicelabel",
+  "pk": 58,
+  "fields": {
+    "name": "Chicken Aids",
+    "description": "Chicken Aids"
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 59,
+  "fields": {
+    "name": "amount infected",
+    "description": null
+  }
+},
+{
+  "model": "service_development.voicelabel",
+  "pk": 60,
+  "fields": {
+    "name": "wav_file_missing",
+    "description": "wav file missing"
+  }
+},
+{
   "model": "service_development.language",
   "pk": 1,
   "fields": {
@@ -387,7 +451,14 @@
     "seven": 17,
     "eight": 18,
     "nine": 19,
-    "zero": 20
+    "zero": 20,
+    "ask_name": null,
+    "ask_confirmation": null,
+    "repeat": null,
+    "final": null,
+    "did_not_hear": null,
+    "ask_submit_batch": null,
+    "batch_days_ago": null
   }
 },
 {
@@ -410,7 +481,14 @@
     "seven": 17,
     "eight": 18,
     "nine": 19,
-    "zero": 20
+    "zero": 20,
+    "ask_name": 60,
+    "ask_confirmation": 60,
+    "repeat": 60,
+    "final": 60,
+    "did_not_hear": 60,
+    "ask_submit_batch": 60,
+    "batch_days_ago": 60
   }
 },
 {
@@ -433,7 +511,41 @@
     "seven": 17,
     "eight": 18,
     "nine": 19,
-    "zero": 20
+    "zero": 20,
+    "ask_name": null,
+    "ask_confirmation": null,
+    "repeat": null,
+    "final": null,
+    "did_not_hear": null,
+    "ask_submit_batch": null,
+    "batch_days_ago": null
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 1,
+  "fields": {
+    "parent": 6,
+    "language": 2,
+    "audio": "boring_guy_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 2,
+  "fields": {
+    "parent": 6,
+    "language": 1,
+    "audio": "boring_guy_nl.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 6,
+  "fields": {
+    "parent": 22,
+    "language": 1,
+    "audio": "no_nl.wav"
   }
 },
 {
@@ -452,6 +564,15 @@
     "parent": 22,
     "language": 3,
     "audio": "no_fr_8dqXMbr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 9,
+  "fields": {
+    "parent": 21,
+    "language": 1,
+    "audio": "yes_nl.wav"
   }
 },
 {
@@ -852,6 +973,42 @@
 },
 {
   "model": "service_development.voicefragment",
+  "pk": 54,
+  "fields": {
+    "parent": 6,
+    "language": 3,
+    "audio": "boring_guy_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 55,
+  "fields": {
+    "parent": 5,
+    "language": 1,
+    "audio": "thank_you_for_using_nl.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 56,
+  "fields": {
+    "parent": 5,
+    "language": 2,
+    "audio": "thank_you_for_using_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 57,
+  "fields": {
+    "parent": 5,
+    "language": 3,
+    "audio": "thank_you_for_using_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
   "pk": 58,
   "fields": {
     "parent": 4,
@@ -875,6 +1032,33 @@
     "parent": 4,
     "language": 3,
     "audio": "english_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 61,
+  "fields": {
+    "parent": 3,
+    "language": 1,
+    "audio": "truth_nl.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 62,
+  "fields": {
+    "parent": 3,
+    "language": 2,
+    "audio": "truth_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 63,
+  "fields": {
+    "parent": 3,
+    "language": 3,
+    "audio": "truth_fr.wav"
   }
 },
 {
@@ -929,6 +1113,42 @@
     "parent": 1,
     "language": 3,
     "audio": "dutch_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 70,
+  "fields": {
+    "parent": 23,
+    "language": 1,
+    "audio": "king_question_nl.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 71,
+  "fields": {
+    "parent": 23,
+    "language": 2,
+    "audio": "king_question_en.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 72,
+  "fields": {
+    "parent": 23,
+    "language": 3,
+    "audio": "king_question_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 74,
+  "fields": {
+    "parent": 25,
+    "language": 3,
+    "audio": "speakYourMessage.wav"
   }
 },
 {
@@ -1415,6 +1635,114 @@
     "parent": 57,
     "language": 3,
     "audio": "account_created_fr.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 139,
+  "fields": {
+    "parent": 58,
+    "language": 2,
+    "audio": "1_fr_yq0BBDT.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 140,
+  "fields": {
+    "parent": 59,
+    "language": 2,
+    "audio": "amount_infected_en_GJsQaJQ.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 141,
+  "fields": {
+    "parent": 59,
+    "language": 3,
+    "audio": "amount_infected_fr_8BwXFpi.wav"
+  }
+},
+{
+  "model": "service_development.voicefragment",
+  "pk": 142,
+  "fields": {
+    "parent": 60,
+    "language": 2,
+    "audio": "wav_file_is_missing_Aq1PYjQ.wav"
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 2,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T19:30:23.792Z",
+    "modification_date": "2018-04-25T17:06:34.442Z",
+    "name": "Does the king like to drink beer?",
+    "description": "",
+    "voice_label": 23
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 3,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T19:32:07.853Z",
+    "modification_date": "2018-04-25T17:06:34.447Z",
+    "name": "Yes",
+    "description": "King <3's BEER",
+    "voice_label": 31
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 4,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T19:32:07.854Z",
+    "modification_date": "2018-04-25T17:06:34.449Z",
+    "name": "No",
+    "description": "",
+    "voice_label": 32
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 5,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T19:49:50.055Z",
+    "modification_date": "2018-02-16T16:42:51.484Z",
+    "name": "This is the truth",
+    "description": "",
+    "voice_label": 3
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 6,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T21:11:06.805Z",
+    "modification_date": "2017-04-23T21:33:29.853Z",
+    "name": "Thank you for using this service",
+    "description": "",
+    "voice_label": 5
+  }
+},
+{
+  "model": "service_development.voiceservicesubelement",
+  "pk": 7,
+  "fields": {
+    "service": 1,
+    "creation_date": "2017-04-23T21:36:55.756Z",
+    "modification_date": "2017-04-23T21:36:55.756Z",
+    "name": "King is boring",
+    "description": "",
+    "voice_label": 6
   }
 },
 {
@@ -2451,6 +2779,26 @@
 },
 {
   "model": "service_development.voiceserviceelement",
+  "pk": 2,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 5,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 6,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
+  "pk": 7,
+  "fields": {}
+},
+{
+  "model": "service_development.voiceserviceelement",
   "pk": 8,
   "fields": {}
 },
@@ -2571,17 +2919,36 @@
 },
 {
   "model": "service_development.voiceservice",
+  "pk": 1,
+  "fields": {
+    "name": "King's truth checker",
+    "description": "Checks the user's knowledge about the king of the Netherlands",
+    "creation_date": "2017-04-23T19:23:52.392Z",
+    "modification_date": "2018-05-01T10:41:56.737Z",
+    "active": true,
+    "_start_element": 2,
+    "registration": "preferred",
+    "registration_language": true,
+    "registration_name": false,
+    "supported_languages": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "service_development.voiceservice",
   "pk": 2,
   "fields": {
     "name": "Welcome and registration checker",
     "description": "Welcome user and checks if user is already registered",
     "creation_date": "2018-04-25T10:15:01.996Z",
-    "modification_date": "2018-05-01T20:39:26.242Z",
+    "modification_date": "2018-05-16T15:56:03.750Z",
     "active": true,
     "_start_element": 9,
     "registration": "preferred",
     "registration_language": true,
-    "registration_name": false,
+    "registration_name": true,
     "supported_languages": [
       2,
       3
@@ -2704,15 +3071,30 @@
 },
 {
   "model": "service_development.kasadakauser",
+  "pk": 1,
+  "fields": {
+    "caller_id": "456",
+    "first_name": "Henk",
+    "last_name": "Ernia",
+    "creation_date": "2018-02-02T11:10:27.670Z",
+    "modification_date": "2018-02-12T14:44:24.019Z",
+    "language": 1,
+    "service": 1,
+    "name_voice": null
+  }
+},
+{
+  "model": "service_development.kasadakauser",
   "pk": 2,
   "fields": {
     "caller_id": "123",
     "first_name": "John",
     "last_name": "Williams",
     "creation_date": "2018-04-30T17:42:21.678Z",
-    "modification_date": "2018-04-30T17:42:21.678Z",
+    "modification_date": "2018-05-16T16:52:05.484Z",
     "language": 2,
-    "service": 2
+    "service": 2,
+    "name_voice": null
   }
 },
 {
@@ -2948,7 +3330,7 @@
   "pk": 20,
   "fields": {
     "start": "2018-05-01T20:35:03.069Z",
-    "end": "2018-05-01T20:35:03.631Z",
+    "end": "2018-05-16T16:52:05.517Z",
     "user": 2,
     "caller_id": "123",
     "service": 2,
@@ -2988,6 +3370,246 @@
     "user": null,
     "caller_id": "123",
     "service": 5,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 24,
+  "fields": {
+    "start": "2018-05-01T11:21:57.242Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 25,
+  "fields": {
+    "start": "2018-05-01T11:21:57.398Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 26,
+  "fields": {
+    "start": "2018-05-01T11:21:57.584Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 27,
+  "fields": {
+    "start": "2018-05-01T11:21:57.727Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 28,
+  "fields": {
+    "start": "2018-05-01T11:21:57.875Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 29,
+  "fields": {
+    "start": "2018-05-01T11:22:40.588Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 30,
+  "fields": {
+    "start": "2018-05-01T11:23:17.165Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 31,
+  "fields": {
+    "start": "2018-05-01T11:23:23.716Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 32,
+  "fields": {
+    "start": "2018-05-01T11:23:43.806Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 33,
+  "fields": {
+    "start": "2018-05-01T11:23:47.558Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 34,
+  "fields": {
+    "start": "2018-05-01T11:37:28.880Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 35,
+  "fields": {
+    "start": "2018-05-01T11:37:38.823Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 36,
+  "fields": {
+    "start": "2018-05-02T07:47:28.975Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 37,
+  "fields": {
+    "start": "2018-05-02T07:48:21.737Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 38,
+  "fields": {
+    "start": "2018-05-15T10:49:16.970Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 39,
+  "fields": {
+    "start": "2018-05-15T10:49:21.976Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 40,
+  "fields": {
+    "start": "2018-05-15T10:49:22.491Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 41,
+  "fields": {
+    "start": "2018-05-15T10:49:22.947Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 42,
+  "fields": {
+    "start": "2018-05-15T10:49:23.408Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 43,
+  "fields": {
+    "start": "2018-05-15T10:49:23.821Z",
+    "end": null,
+    "user": null,
+    "caller_id": null,
+    "service": 1,
     "_language": null
   }
 },
@@ -3162,6 +3784,541 @@
   }
 },
 {
+  "model": "service_development.callsessionstep",
+  "pk": 18,
+  "fields": {
+    "time": "2018-05-16T15:29:06.271Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 19,
+  "fields": {
+    "time": "2018-05-16T15:29:06.302Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 20,
+  "fields": {
+    "time": "2018-05-16T15:30:37.510Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 21,
+  "fields": {
+    "time": "2018-05-16T15:30:37.542Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 22,
+  "fields": {
+    "time": "2018-05-16T15:30:45.359Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 23,
+  "fields": {
+    "time": "2018-05-16T15:30:45.388Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 24,
+  "fields": {
+    "time": "2018-05-16T15:35:21.774Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 25,
+  "fields": {
+    "time": "2018-05-16T15:35:25.128Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 26,
+  "fields": {
+    "time": "2018-05-16T15:35:25.158Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 27,
+  "fields": {
+    "time": "2018-05-16T15:38:58.736Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 28,
+  "fields": {
+    "time": "2018-05-16T15:38:58.765Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 29,
+  "fields": {
+    "time": "2018-05-16T15:39:09.952Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 30,
+  "fields": {
+    "time": "2018-05-16T15:39:24.552Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 31,
+  "fields": {
+    "time": "2018-05-16T15:39:24.583Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 32,
+  "fields": {
+    "time": "2018-05-16T15:39:43.869Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 33,
+  "fields": {
+    "time": "2018-05-16T15:39:43.902Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 34,
+  "fields": {
+    "time": "2018-05-16T15:40:01.917Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 35,
+  "fields": {
+    "time": "2018-05-16T15:49:10.003Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 36,
+  "fields": {
+    "time": "2018-05-16T15:49:10.035Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 37,
+  "fields": {
+    "time": "2018-05-16T15:52:13.233Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 38,
+  "fields": {
+    "time": "2018-05-16T15:52:13.263Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 39,
+  "fields": {
+    "time": "2018-05-16T15:52:27.040Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 40,
+  "fields": {
+    "time": "2018-05-16T15:52:27.074Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 41,
+  "fields": {
+    "time": "2018-05-16T15:52:51.480Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 42,
+  "fields": {
+    "time": "2018-05-16T15:52:51.516Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 43,
+  "fields": {
+    "time": "2018-05-16T15:53:02.131Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 44,
+  "fields": {
+    "time": "2018-05-16T15:53:02.164Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 45,
+  "fields": {
+    "time": "2018-05-16T15:53:21.516Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 46,
+  "fields": {
+    "time": "2018-05-16T15:53:21.548Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 47,
+  "fields": {
+    "time": "2018-05-16T15:53:45.087Z",
+    "session": 20,
+    "_visited_element": null,
+    "description": "Registered as user: John Williams (123)"
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 48,
+  "fields": {
+    "time": "2018-05-16T15:53:45.116Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 49,
+  "fields": {
+    "time": "2018-05-16T15:56:12.677Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 50,
+  "fields": {
+    "time": "2018-05-16T16:04:08.807Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 51,
+  "fields": {
+    "time": "2018-05-16T16:04:53.184Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 52,
+  "fields": {
+    "time": "2018-05-16T16:05:19.705Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 53,
+  "fields": {
+    "time": "2018-05-16T16:05:48.091Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 54,
+  "fields": {
+    "time": "2018-05-16T16:26:18.363Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 55,
+  "fields": {
+    "time": "2018-05-16T16:27:57.453Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 56,
+  "fields": {
+    "time": "2018-05-16T16:30:41.730Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 57,
+  "fields": {
+    "time": "2018-05-16T16:31:49.778Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 58,
+  "fields": {
+    "time": "2018-05-16T16:33:26.652Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 59,
+  "fields": {
+    "time": "2018-05-16T16:36:06.054Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 60,
+  "fields": {
+    "time": "2018-05-16T16:37:10.225Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 61,
+  "fields": {
+    "time": "2018-05-16T16:37:21.909Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 62,
+  "fields": {
+    "time": "2018-05-16T16:40:36.343Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 63,
+  "fields": {
+    "time": "2018-05-16T16:40:51.146Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 64,
+  "fields": {
+    "time": "2018-05-16T16:41:13.563Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 65,
+  "fields": {
+    "time": "2018-05-16T16:42:00.994Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 66,
+  "fields": {
+    "time": "2018-05-16T16:42:34.955Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 67,
+  "fields": {
+    "time": "2018-05-16T16:43:55.089Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 68,
+  "fields": {
+    "time": "2018-05-16T16:44:34.089Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 69,
+  "fields": {
+    "time": "2018-05-16T16:46:53.429Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.callsessionstep",
+  "pk": 70,
+  "fields": {
+    "time": "2018-05-16T16:52:05.520Z",
+    "session": 20,
+    "_visited_element": 9,
+    "description": null
+  }
+},
+{
+  "model": "service_development.choice",
+  "pk": 2,
+  "fields": {}
+},
+{
   "model": "service_development.choice",
   "pk": 9,
   "fields": {}
@@ -3220,6 +4377,22 @@
   "model": "service_development.choice",
   "pk": 90,
   "fields": {}
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 3,
+  "fields": {
+    "parent": 2,
+    "_redirect": 5
+  }
+},
+{
+  "model": "service_development.choiceoption",
+  "pk": 4,
+  "fields": {
+    "parent": 2,
+    "_redirect": 7
+  }
 },
 {
   "model": "service_development.choiceoption",
@@ -3719,6 +4892,30 @@
 },
 {
   "model": "service_development.messagepresentation",
+  "pk": 5,
+  "fields": {
+    "final_element": false,
+    "_redirect": 6
+  }
+},
+{
+  "model": "service_development.messagepresentation",
+  "pk": 6,
+  "fields": {
+    "final_element": true,
+    "_redirect": null
+  }
+},
+{
+  "model": "service_development.messagepresentation",
+  "pk": 7,
+  "fields": {
+    "final_element": false,
+    "_redirect": 6
+  }
+},
+{
+  "model": "service_development.messagepresentation",
   "pk": 8,
   "fields": {
     "final_element": false,
@@ -3828,6 +5025,110 @@
     "input_category": 1,
     "max_time_input": 180,
     "_redirect": 8
+  }
+},
+{
+  "model": "service_development.disease",
+  "pk": 1,
+  "fields": {
+    "name": "Chicken Aids",
+    "voice_label": 58,
+    "has_vaccinations": true,
+    "vaccinations_refills": 2,
+    "vaccinate_days_after_birth": 7,
+    "vaccinations_days_between": 7
+  }
+},
+{
+  "model": "service_development.disease",
+  "pk": 2,
+  "fields": {
+    "name": "Chicken Gonorrhea",
+    "voice_label": 58,
+    "has_vaccinations": true,
+    "vaccinations_refills": 0,
+    "vaccinate_days_after_birth": 7,
+    "vaccinations_days_between": 7
+  }
+},
+{
+  "model": "service_development.disease",
+  "pk": 3,
+  "fields": {
+    "name": "Chicken Ebola",
+    "voice_label": 58,
+    "has_vaccinations": true,
+    "vaccinations_refills": 0,
+    "vaccinate_days_after_birth": 7,
+    "vaccinations_days_between": 7
+  }
+},
+{
+  "model": "service_development.usersdiseases",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "disease": 1,
+    "amount": 3
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 5,
+  "fields": {
+    "batch": 1,
+    "disease": 1,
+    "date_scheduled": "2018-05-25",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 6,
+  "fields": {
+    "batch": 1,
+    "disease": 1,
+    "date_scheduled": "2018-05-25",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 7,
+  "fields": {
+    "batch": 1,
+    "disease": 1,
+    "date_scheduled": "2018-06-01",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 8,
+  "fields": {
+    "batch": 1,
+    "disease": 2,
+    "date_scheduled": "2018-05-25",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 9,
+  "fields": {
+    "batch": 1,
+    "disease": 3,
+    "date_scheduled": "2018-05-25",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.batch",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "date": "2018-05-18",
+    "amount": 0
   }
 }
 ]
