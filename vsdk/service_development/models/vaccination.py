@@ -2,22 +2,22 @@ import datetime
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+from datetime import datetime, timedelta
 
-from .batch import *
 from .disease import *
 
 class Vaccination(models.Model):
     batch = models.ForeignKey(
-        Batch,
+        "Batch",
         verbose_name = 'Batch',
-        on_delete = models.SET_NULL,
+        on_delete = models.CASCADE,
         null  = True,
         blank = False,
     )
     disease = models.ForeignKey(
         Disease,
         verbose_name = 'Disease',
-        on_delete = models.SET_NULL,
+        on_delete = models.CASCADE,
         null  = True,
         blank = False,
     )
@@ -26,15 +26,14 @@ class Vaccination(models.Model):
         null  = False,
         blank = False,
     )
+
     date_given = models.DateField(
         null  = True,
         blank = True,
     )
 
-    amount = models.IntegerField(default = 0)
-
     def __str__(self):
-        return "vaccination {}".format(self.id)
+        return "vaccination for user {} for treating {} on batch {} scheduled on {}".format(self.batch.user.id, self.disease.name, self.batch.id, self.date_scheduled)
 
     def is_valid(self):
         return len(self.validator()) == 0

@@ -24,7 +24,7 @@ class KasaDakaUserRegistration(TemplateView):
 
         # if session.service.registration_name:
         #    user.name_voice =
-        # TODO: name_voice opslaan ofzo
+        # TOCHNIETTODO: name_voice opslaan ofzo
 
         user.save()
         session.link_to_user(user)

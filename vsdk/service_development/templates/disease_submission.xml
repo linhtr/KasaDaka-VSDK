@@ -65,7 +65,7 @@
 	{% for key, value in pass_on_variables.items %}
 	<assign name="{{ key }}" expr="'{{ value }}'"/>
 	{% endfor %}
-	<submit next="{{ redirect_url }}" method="post" namelist="disease_id disease_amount {% for key, value in pass_on_variables.items %} {{ key }} {% endfor %}"/>
+	<submit next="{{ redirect_url_POST }}" method="post" namelist="disease_id disease_amount {% for key, value in pass_on_variables.items %} {{ key }} {% endfor %}"/>
 </block>
 </form>
 

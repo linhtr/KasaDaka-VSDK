@@ -16,8 +16,6 @@
 
 </record>
 
-
-
 {% if repeat_recording_to_caller %}
     <block>
         <prompt>

@@ -14,36 +14,31 @@
 			{% endfor %}
 		</prompt>
 
-
-
-   <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
-      <rule id="MYRULE" scope = "public">
-        <one-of>
-          {% for language in languages %}
-            <item>{{ forloop.counter }}</item>
-          {% endfor %}
-        </one-of>
-       </rule>
-   </grammar>
+	   <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
+	      <rule id="MYRULE" scope = "public">
+	        <one-of>
+	          {% for language in languages %}
+	            <item>{{ forloop.counter }}</item>
+	          {% endfor %}
+	        </one-of>
+	       </rule>
+	   </grammar>
    {# when there has been input, save the corresponding URI in the given variable #}
-   <filled>
-    {% for language in languages %}
-      {% if forloop.counter == 1 %}
-      <if cond="language_field == '{{ forloop.counter }}'">
-		  <assign name="language_id" expr="'{{ language.id }}'"/>
-      {% else %}
-      <elseif cond="language_field == '{{ forloop.counter }}'" />
-      <assign name="language_id" expr="'{{ language.id }}'"/>
-      {% endif %}
-    {% endfor %}
-
-
-    <else/>
-    </if>
-
-    <goto next="#submit_form"/>
-  </filled>
- </field>
+	   <filled>
+	    {% for language in languages %}
+	      {% if forloop.counter == 1 %}
+	      <if cond="language_field == '{{ forloop.counter }}'">
+			  <assign name="language_id" expr="'{{ language.id }}'"/>
+	      {% else %}
+	      <elseif cond="language_field == '{{ forloop.counter }}'" />
+	      <assign name="language_id" expr="'{{ language.id }}'"/>
+	      {% endif %}
+	    {% endfor %}
+	    <else/>
+	    </if>
+	    <goto next="#submit_form"/>
+	  </filled>
+ 	</field>
 </form>
 
 

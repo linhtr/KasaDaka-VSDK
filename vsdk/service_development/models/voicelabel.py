@@ -112,6 +112,7 @@ class Language(models.Model):
             verbose_name = ugettext("The number %(number)s")% {'number':'0'},
             related_name = 'language_zero',
             help_text = ugettext("The number %(number)s")% {'number':'0'})
+    # STUFF FOR RECORDING NAME
     ask_name = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Ask name'),
@@ -141,6 +142,19 @@ class Language(models.Model):
             verbose_name = _('Did not hear'),
             related_name = 'language_did_not_hear',
             help_text = _("The voice label that is played when the system does not recognize the user saying anything. Example: 'We did not hear anything, please speak your message.'"),
+            null = True)
+    # STUFF FOR REGISTERING BATCHES
+    ask_submit_batch = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Ask to submit batch'),
+            related_name = 'language_ask_submit_batch',
+            help_text = _("The voice label that is played when the system asks user to submit a batch. Example: 'Do you want to submit a batch? Press 1 for yes, 2 for no.'"),
+            null = True)
+    batch_days_ago = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Batch days ago'),
+            related_name = 'language_batch_days_ago',
+            help_text = _("The voice label that is played when the system asks the user how many days ago the batch was born. Example: 'How many days ago was this batch born?'"),
             null = True)
 
     class Meta:
@@ -193,6 +207,8 @@ class Language(models.Model):
                 'repeat':self.repeat,
                 'final':self.final,
                 'did_not_hear':self.did_not_hear,
+                'ask_submit_batch' : self.ask_submit_batch,
+                'batch_days_ago' : self.batch_days_ago,
                 }
 
         for k, v in interface_voice_labels.items():

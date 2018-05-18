@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
 
-
 from .voicelabel import VoiceLabel
 
 class Disease(models.Model):
@@ -14,7 +13,7 @@ class Disease(models.Model):
             blank = True,
             )
     has_vaccinations = models.BooleanField(null = False, default = True)
-    vaccinations_needed_amount = models.IntegerField(null = False, default = 1)
+    vaccinations_refills = models.IntegerField(null = False, default = 0)
     vaccinate_days_after_birth = models.IntegerField(null = False, default = 7)
     vaccinations_days_between  = models.IntegerField(null = False, default = 7)
 
