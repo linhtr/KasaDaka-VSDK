@@ -33,7 +33,8 @@ class Vaccination(models.Model):
     )
 
     def __str__(self):
-        return "vaccination for user {} for treating {} on batch {} scheduled on {}".format(self.batch.user.id, self.disease.name, self.batch.id, self.date_scheduled)
+        return "vaccination for user {}'s {} batch for {}, scheduled on {}".format(self.batch.user.id, self.batch.get_user_batch_index_ord(), self.disease.name, self.date_scheduled)
+        # return "vaccination for user {} for treating {} on batch {} scheduled on {}".format(self.batch.user.id, self.disease.name, self.batch.id, self.date_scheduled)
 
     def is_valid(self):
         return len(self.validator()) == 0
@@ -49,13 +50,13 @@ class Vaccination(models.Model):
 
         return errors
 
-    def get_due_date(date):
+    def get_due_date(self, date):
         return self.filter(date_scheduled = date)
 
-    def get_due_today():
-        return get_due_date(datetime.date.today())
+    def get_due_today(self):
+        return self.get_due_date(datetime.date.today())
 
-    def has_been_given():
+    def has_been_given(self):
         return self.date_given <= datetime.date.today()
 
     class Meta:

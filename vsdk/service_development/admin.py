@@ -187,10 +187,17 @@ class SpokenUserInputAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return False
 
+class BatchVaccinationInline(admin.TabularInline):
+    model = Vaccination
+    extra = 0
+
+class BatchAdmin(admin.ModelAdmin):
+    list_display = ('__str__',)
+    fieldsets = [(_('General'), {'fields' : ['user', 'date']}),]
+    inlines = [BatchVaccinationInline]
 
 
 # Register your models here.
-
 admin.site.register(VoiceService, VoiceServiceAdmin)
 admin.site.register(MessagePresentation, MessagePresentationAdmin)
 admin.site.register(Choice, ChoiceAdmin)
@@ -201,6 +208,6 @@ admin.site.register(Disease)
 admin.site.register(VoiceLabel, VoiceLabelAdmin)
 admin.site.register(SpokenUserInput, SpokenUserInputAdmin)
 admin.site.register(UserInputCategory)
-admin.site.register(Batch)
+admin.site.register(Batch, BatchAdmin)
 admin.site.register(Vaccination)
 # admin.site.register(Record)
