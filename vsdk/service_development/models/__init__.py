@@ -11,3 +11,4 @@ from .disease import *
 from .usersdiseases import *
 from .batch import *
 from .vaccination import *
+from .disease_vaccinationday import *

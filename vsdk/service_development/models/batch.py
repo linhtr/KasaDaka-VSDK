@@ -31,21 +31,12 @@ class Batch(models.Model):
     is_valid.short_description = 'Is valid'
 
     def schedule_vaccinations(self):
-        for disease in Disease.objects.filter(has_vaccinations=True):
-
-            # make the first vaccination
-            vaccination = Vaccination.objects.create(
-                batch = self,
-                disease = disease,
-                date_scheduled = self.date+timedelta(days=disease.vaccinate_days_after_birth)
-            )
-
-            # generate the refill vaccinations
-            for i in range(disease.vaccinations_refills):
+        for disease in Disease.objects.all():
+            for disease_vaccinationday in disease.get_vaccination_days():
                 vaccination = Vaccination.objects.create(
                     batch = self,
                     disease = disease,
-                    date_scheduled = self.date+timedelta(days=(disease.vaccinate_days_after_birth + ((i + 1) * disease.vaccinations_days_between)))
+                    date_scheduled = self.date+timedelta(days=disease_vaccinationday.days_after_birth)
                 )
 
     def get_user_batch_index(self):

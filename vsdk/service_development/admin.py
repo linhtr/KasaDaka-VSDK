@@ -168,14 +168,26 @@ class CallSessionAdmin(admin.ModelAdmin):
 class MessagePresentationAdmin(VoiceServiceElementAdmin):
     fieldsets = VoiceServiceElementAdmin.fieldsets + [(_('Message Presentation'), {'fields': ['_redirect','final_element']})]
 
-class KasaDakaUsersDiseasesAdminInline(admin.TabularInline):
-    model = UsersDiseases
+class KasaDakaUsersBatchVaccinationAdminInline(admin.TabularInline):
+    model = Vaccination
+
+class KasaDakaUsersBatchAdminInline(admin.TabularInline):
+    model = Batch
+    show_change_link = True
+    fields = ['date']
+    inlines = [KasaDakaUsersBatchVaccinationAdminInline]
 
 class KasaDakaUserAdmin(admin.ModelAdmin):
     list_filter = ['service','language','caller_id']
     list_display = ('__str__','caller_id', 'service', 'language', 'name_voice')
-    inlines = [KasaDakaUsersDiseasesAdminInline]
+    inlines = [KasaDakaUsersBatchAdminInline]
 
+class DiseaseVaccinationdayInline(admin.TabularInline):
+    model = DiseaseVaccinationday
+    extra = 1
+
+class DiseaseAdmin(admin.ModelAdmin):
+    inlines = [DiseaseVaccinationdayInline]
 
 class SpokenUserInputAdmin(admin.ModelAdmin):
     list_display = ('__str__','category','description','audio_file_player')
@@ -204,7 +216,7 @@ admin.site.register(Choice, ChoiceAdmin)
 admin.site.register(CallSession, CallSessionAdmin)
 admin.site.register(KasaDakaUser, KasaDakaUserAdmin)
 admin.site.register(Language)
-admin.site.register(Disease)
+admin.site.register(Disease, DiseaseAdmin)
 admin.site.register(VoiceLabel, VoiceLabelAdmin)
 admin.site.register(SpokenUserInput, SpokenUserInputAdmin)
 admin.site.register(UserInputCategory)
