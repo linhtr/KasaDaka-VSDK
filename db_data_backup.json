@@ -5213,15 +5213,101 @@
   }
 },
 {
+  "model": "service_development.diseasevaccinationday",
+  "pk": 1,
+  "fields": {
+    "disease": 4,
+    "number": 1,
+    "days_after_birth": 7
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 2,
+  "fields": {
+    "disease": 4,
+    "number": 2,
+    "days_after_birth": 12
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 3,
+  "fields": {
+    "disease": 4,
+    "number": 3,
+    "days_after_birth": 19
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 4,
+  "fields": {
+    "disease": 3,
+    "number": 1,
+    "days_after_birth": 12
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 5,
+  "fields": {
+    "disease": 3,
+    "number": 2,
+    "days_after_birth": 17
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 6,
+  "fields": {
+    "disease": 3,
+    "number": 3,
+    "days_after_birth": 26
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 7,
+  "fields": {
+    "disease": 2,
+    "number": 1,
+    "days_after_birth": 5
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 8,
+  "fields": {
+    "disease": 2,
+    "number": 2,
+    "days_after_birth": 10
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 9,
+  "fields": {
+    "disease": 2,
+    "number": 3,
+    "days_after_birth": 15
+  }
+},
+{
+  "model": "service_development.diseasevaccinationday",
+  "pk": 10,
+  "fields": {
+    "disease": 1,
+    "number": 1,
+    "days_after_birth": 12
+  }
+},
+{
   "model": "service_development.disease",
   "pk": 1,
   "fields": {
     "name": "Fowlpox",
-    "voice_label": 58,
-    "has_vaccinations": true,
-    "vaccinations_refills": 2,
-    "vaccinate_days_after_birth": 7,
-    "vaccinations_days_between": 7
+    "voice_label": 58
   }
 },
 {
@@ -5229,11 +5315,7 @@
   "pk": 2,
   "fields": {
     "name": "Gomboro",
-    "voice_label": 58,
-    "has_vaccinations": true,
-    "vaccinations_refills": 0,
-    "vaccinate_days_after_birth": 7,
-    "vaccinations_days_between": 7
+    "voice_label": 58
   }
 },
 {
@@ -5241,11 +5323,7 @@
   "pk": 3,
   "fields": {
     "name": "Newcastle Disease",
-    "voice_label": 58,
-    "has_vaccinations": true,
-    "vaccinations_refills": 0,
-    "vaccinate_days_after_birth": 7,
-    "vaccinations_days_between": 7
+    "voice_label": 58
   }
 },
 {
@@ -5253,11 +5331,7 @@
   "pk": 4,
   "fields": {
     "name": "Infectious Bronchitis",
-    "voice_label": 58,
-    "has_vaccinations": true,
-    "vaccinations_refills": 1,
-    "vaccinate_days_after_birth": 7,
-    "vaccinations_days_between": 14
+    "voice_label": 58
   }
 },
 {
@@ -5271,171 +5345,101 @@
 },
 {
   "model": "service_development.vaccination",
-  "pk": 5,
+  "pk": 22,
   "fields": {
     "batch": 1,
     "disease": 1,
-    "date_scheduled": "2018-05-25",
+    "date_scheduled": "2018-05-30",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 6,
-  "fields": {
-    "batch": 1,
-    "disease": 1,
-    "date_scheduled": "2018-05-25",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 7,
-  "fields": {
-    "batch": 1,
-    "disease": 1,
-    "date_scheduled": "2018-06-01",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 8,
+  "pk": 23,
   "fields": {
     "batch": 1,
     "disease": 2,
-    "date_scheduled": "2018-05-25",
+    "date_scheduled": "2018-05-23",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 9,
+  "pk": 24,
+  "fields": {
+    "batch": 1,
+    "disease": 2,
+    "date_scheduled": "2018-05-28",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 25,
+  "fields": {
+    "batch": 1,
+    "disease": 2,
+    "date_scheduled": "2018-06-02",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 26,
   "fields": {
     "batch": 1,
     "disease": 3,
-    "date_scheduled": "2018-05-25",
+    "date_scheduled": "2018-05-30",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 10,
+  "pk": 27,
   "fields": {
-    "batch": 2,
-    "disease": 1,
-    "date_scheduled": "2018-05-29",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 11,
-  "fields": {
-    "batch": 2,
-    "disease": 1,
-    "date_scheduled": "2018-06-05",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 12,
-  "fields": {
-    "batch": 2,
-    "disease": 1,
-    "date_scheduled": "2018-06-12",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 13,
-  "fields": {
-    "batch": 2,
-    "disease": 2,
-    "date_scheduled": "2018-05-29",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 14,
-  "fields": {
-    "batch": 2,
+    "batch": 1,
     "disease": 3,
-    "date_scheduled": "2018-05-29",
+    "date_scheduled": "2018-06-04",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 15,
+  "pk": 28,
   "fields": {
-    "batch": 3,
-    "disease": 1,
-    "date_scheduled": "2018-05-29",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 16,
-  "fields": {
-    "batch": 3,
-    "disease": 1,
-    "date_scheduled": "2018-06-05",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 17,
-  "fields": {
-    "batch": 3,
-    "disease": 1,
-    "date_scheduled": "2018-06-12",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 18,
-  "fields": {
-    "batch": 3,
-    "disease": 2,
-    "date_scheduled": "2018-05-29",
-    "date_given": null
-  }
-},
-{
-  "model": "service_development.vaccination",
-  "pk": 19,
-  "fields": {
-    "batch": 3,
+    "batch": 1,
     "disease": 3,
-    "date_scheduled": "2018-05-29",
+    "date_scheduled": "2018-06-13",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 20,
+  "pk": 29,
   "fields": {
-    "batch": 3,
+    "batch": 1,
     "disease": 4,
-    "date_scheduled": "2018-05-29",
+    "date_scheduled": "2018-05-25",
     "date_given": null
   }
 },
 {
   "model": "service_development.vaccination",
-  "pk": 21,
+  "pk": 30,
   "fields": {
-    "batch": 3,
+    "batch": 1,
     "disease": 4,
-    "date_scheduled": "2018-06-12",
+    "date_scheduled": "2018-05-30",
+    "date_given": null
+  }
+},
+{
+  "model": "service_development.vaccination",
+  "pk": 31,
+  "fields": {
+    "batch": 1,
+    "disease": 4,
+    "date_scheduled": "2018-06-06",
     "date_given": null
   }
 },
