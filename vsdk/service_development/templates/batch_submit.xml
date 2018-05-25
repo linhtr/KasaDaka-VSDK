@@ -2,52 +2,66 @@
 {% block content%}
 <form id="batch_form">
 	<field name="batch_field">
-        <prompt>
-        <audio src="{{ask_submit_batch_voice_label}}"/>
-        </prompt>
-        <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
-              <rule id="MYRULE" scope = "public">
-                <one-of>
-                    <item>1</item>
-                    <item>2</item>
-                </one-of>
-               </rule>
-             </grammar>
-          <filled>
-			  <if cond="confirm == '1'">
-                  <goto next="#batch_days_form"/>
-			  </if>
-			  <if cond="confirm == '2'">
-            	<goto next="{{ url }}"/>
-			  </if>
-          </filled>
+      <prompt>
+          <audio src="{{welcome_user_voice_label}}"/>
+          <audio src="{{ask_submit_batch_voice_label}}"/>
+      </prompt>
+      <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
+          <rule id="MYRULE" scope = "public">
+            <one-of>
+                <item>1</item>
+                <item>2</item>
+            </one-of>
+          </rule>
+      </grammar>
+      <filled>
+  			  <if cond="confirm == '1'">
+              <goto next="#batch_days_form"/>
+  			  </if>
+  			  <if cond="confirm == '2'">
+              <!-- <goto next="{{ url }}"/> -->
+              <goto next="#end_call_form"/>
+  			  </if>
+      </filled>
  	</field>
 </form>
 
 <form id="batch_days_form">
-{# Here the minimum and maximum number of digits to be entered are defined. The result is saved in a variable. #}
-  <field name="batch_days_field" type="digits?minlength=1;maxlength=1">
-    <prompt>
-    	<audio src="{{batch_days_ago_voice_label}}"/>
-    </prompt>
-    <filled>
-    {# saves the input to a variable with the name given, to be submitted later #}
-   		<assign name="days_ago" expr="days_ago_field"/>
-		{# forward the user to the given goto form #}
-		<goto next="#submit_form"/>
-    </filled>
+  {# Here the minimum and maximum number of digits to be entered are defined. The result is saved in a variable. #}
+  <field name="batch_days_field" type="digits?minlength=1;maxlength=2">
+      <prompt>
+          <audio src="{{batch_days_ago_voice_label}}"/>
+      </prompt>
+      <filled>
+          <prompt>
+              <audio src="{{thank_you_submitted_voice_label}}"/>
+          </prompt>
+          {# saves the input to a variable with the name given, to be submitted later #}
+     	    <assign name="days_ago" expr="days_ago_field"/>
+  		    {# forward the user to the given goto form #}
+  		    <goto next="#submit_form"/>
+      </filled>
+  </field>
+</form>
+
+<form id="end_call_form">
+  <field name="end_call_field">
+      <prompt>
+          <audio src="{{end_call_voice_label}}"/>
+      </prompt>
   </field>
 </form>
 
 
 <form id="submit_form">
-<block>
-	{# include the variables in the dictionary 'pass_on_variables' as POST variables #}
-	{% for key, value in pass_on_variables.items %}
-	<assign name="{{ key }}" expr="'{{ value }}'"/>
-	{% endfor %}
-	<submit next="{{ redirect_url_POST }}" method="post" namelist="disease_id disease_amount {% for key, value in pass_on_variables.items %} {{ key }} {% endfor %}"/>
-</block>
+  <block>
+    	{# include the variables in the dictionary 'pass_on_variables' as POST variables #}
+    	{% for key, value in pass_on_variables.items %}
+    	<assign name="{{ key }}" expr="'{{ value }}'"/>
+    	{% endfor %}
+    	<submit next="{{ redirect_url_POST }}" method="post" namelist="disease_id disease_amount {% for key, value in pass_on_variables.items %} {{ key }} {% endfor %}"/>
+      <goto next="#end_call_form"/>
+  </block>
 </form>
 
 

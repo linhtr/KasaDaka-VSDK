@@ -123,38 +123,58 @@ class Language(models.Model):
             on_delete = models.PROTECT,
             verbose_name = _('Ask Confirmation'),
             related_name = 'ask_confirmation',
-            help_text = _("The voice label that asks the user to confirm their input. Example: 'Are you satisfied with your recording? Press 1 to confirm, or press 2 to retry.'"),
+            help_text = _("The voice label that asks the user to confirm their input. Example: 'Is this correct? Press 1 to confirm, or press 2 to retry.'"),
             null = True)
     repeat = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Repeat'),
             related_name = 'language_repeat',
-            help_text = _("The voice label that is played before the system repeats the user input. Example: 'Your message is:'"),
+            help_text = _("The voice label that is played before the system repeats the user input. Example: 'Your name is:'"),
             null = True)
     final = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Final'),
             related_name = 'language_final',
-            help_text = _("The voice label that is played when the user has completed the recording process. Example: 'Thank you for your message! The message has been stored successfully.'"),
+            help_text = _("The voice label that is played when the user has completed the recording process. Example: 'Thank you for registering for our service! Your account has been created.'"),
             null = True)
     did_not_hear = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Did not hear'),
             related_name = 'language_did_not_hear',
-            help_text = _("The voice label that is played when the system does not recognize the user saying anything. Example: 'We did not hear anything, please speak your message.'"),
+            help_text = _("The voice label that is played when the system does not recognize the user saying anything. Example: 'Sorry, I didn't hear anything."),
             null = True)
     # STUFF FOR REGISTERING BATCHES
     ask_submit_batch = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Ask to submit batch'),
             related_name = 'language_ask_submit_batch',
-            help_text = _("The voice label that is played when the system asks user to submit a batch. Example: 'Do you want to submit a batch? Press 1 for yes, 2 for no.'"),
+            help_text = _("The voice label that is played when the system asks user to submit a batch. Example: 'To make use of our vaccination reminder service, please press 1 to register your newborn chicken batch. Press 2, to end this call.'"),
             null = True)
     batch_days_ago = models.ForeignKey('VoiceLabel',
             on_delete = models.PROTECT,
             verbose_name = _('Batch days ago'),
             related_name = 'language_batch_days_ago',
-            help_text = _("The voice label that is played when the system asks the user how many days ago the batch was born. Example: 'How many days ago was this batch born?'"),
+            help_text = _("The voice label that is played when the system asks the user how many days ago the batch was born. Example: 'How many days ago was this new chicken batch born? Enter a number of days ago.'"),
+            null = True)
+    thank_you_submitted = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Batch is submitted + first advice'),
+            related_name = 'language_thank_you_submitted',
+            help_text = _("The voice label that is played after reporting a new chicken batch. Example: 'Thank you, your new chicken batch is submitted. For today, you should vaccinate this new batch immediately with PESTOS against Newcastle Disease. For the other vaccinations, we will send you a reminder 2 days before the vaccination day.'"),
+            null = True)
+    # FOR WELCOMING USER
+    welcome_user = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('Welcome user'),
+            related_name = 'language_welcome_user',
+            help_text = _("The voice label that is played to welcome the user to the program. Example: 'Hello farmer! Welcome to VP: our chicken vaccination program.'"),
+            null = True)
+    # FOR ENDING CALL
+    end_call = models.ForeignKey('VoiceLabel',
+            on_delete = models.PROTECT,
+            verbose_name = _('End call'),
+            related_name = 'language_end_call',
+            help_text = _("The voice label that is played before ending the call. Example: 'Thank you for using our program. This call will now be ended.'"),
             null = True)
 
     class Meta:
@@ -209,6 +229,9 @@ class Language(models.Model):
                 'did_not_hear':self.did_not_hear,
                 'ask_submit_batch' : self.ask_submit_batch,
                 'batch_days_ago' : self.batch_days_ago,
+                'thank_you_submitted' : self.thank_you_submitted,
+                'welcome_user' : self.welcome_user,
+                'end_call' : self.end_call,
                 }
 
         for k, v in interface_voice_labels.items():

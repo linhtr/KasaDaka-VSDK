@@ -13,19 +13,25 @@ class BatchSubmission(TemplateView):
     def render_batch_submission_form(self, request, session, redirect_url):
         diseases = Disease.objects.all()
 
-        # This is the redirect URL to POST the disease submission
+        # This is the redirect URL to POST the batch submission
         redirect_url_POST = reverse('service-development:batch-submit', args = [session.id])
 
-        # This is the redirect URL for *AFTER* the disease submission process
+        # This is the redirect URL for *AFTER* the batch submission process
         pass_on_variables = {'redirect_url' : redirect_url}
 
         language = session.language
+        welcome_user_voice_label = language.get_interface_voice_label_url_dict["welcome_user"]
         ask_submit_batch_voice_label = language.get_interface_voice_label_url_dict["ask_submit_batch"]
         batch_days_ago_voice_label = language.get_interface_voice_label_url_dict["batch_days_ago"]
+        thank_you_submitted_voice_label = language.get_interface_voice_label_url_dict["thank_you_submitted"]
+        end_call_voice_label = language.get_interface_voice_label_url_dict["end_call"]
 
         context = { 'session' : session,
+                    'welcome_user_voice_label' : welcome_user_voice_label,
                     'ask_submit_batch_voice_label' : ask_submit_batch_voice_label,
                     'batch_days_ago_voice_label' : batch_days_ago_voice_label,
+                    'thank_you_submitted_voice_label' : thank_you_submitted_voice_label,
+                    'end_call_voice_label' : end_call_voice_label,
                     'redirect_url_POST' : redirect_url_POST,
                     'pass_on_variables' : pass_on_variables
                    }
