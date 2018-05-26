@@ -57,10 +57,10 @@ class KasaDakaUserRegistration(TemplateView):
         self.create_new_user(request, session)
 
         # Return to start of voice service
-        # return redirect('service-development:voice-service', voice_service_id = session.service.id, session_id = session.id)
+        return redirect('service-development:voice-service', voice_service_id = session.service.id, session_id = session.id)
 
         # Go to the batch submission page
-        return redirect('service-development:batch-submit', session_id = session.id)
+        # return redirect('service-development:batch-submit', session_id = session.id)
 
     def get(self, request, session_id):
         session = get_object_or_404(CallSession, pk = session_id)
