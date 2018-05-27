@@ -1,7 +1,9 @@
-§{% extends "base.xml" %}
+{% extends "base.xml" %}
 {% block content %}
 
 <form id="record_form">
+
+
 	<block>
 	    <prompt>
 	        <audio src="{{final_voice_label}}"/>
