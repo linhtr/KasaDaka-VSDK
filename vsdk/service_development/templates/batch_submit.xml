@@ -37,7 +37,7 @@
               <audio src="{{thank_you_submitted_voice_label}}" />
           </prompt>
           {# saves the input to a variable with the name given, to be submitted later #}
-     	    <assign name="days_ago" expr="days_ago_field" />
+     	    <assign name="days_ago" expr="batch_days_field" />
   		    {# forward the user to the given goto form #}
   		    <goto next="#submit_form" />
       </filled>
