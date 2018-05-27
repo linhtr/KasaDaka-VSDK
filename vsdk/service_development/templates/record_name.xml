@@ -61,11 +61,11 @@
         <goto next="{{ redirect_url }}" />
 	</block>
 </form> -->
-<form id="test_form">
+<!-- <form id="test_form">
 	<block>
 	    <prompt>
 	        <audio src="{{ask_confirmation_voice_label}}"/>
 	    </prompt>
 	</block>
-</form>
+</form> -->
 {% endblock %}
