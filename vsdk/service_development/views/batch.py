@@ -66,7 +66,7 @@ class BatchSubmission(TemplateView):
         print("batchtest3")
         voice_service = session.service
         print("batchtest4")
-        user = get_object_or_404(User, pk = session.user_id)
+        user = get_object_or_404(KasaDakaUser, pk = session.user_id)
         print("batchtest5")
         batch = Batch()
         print("batchtest6")
