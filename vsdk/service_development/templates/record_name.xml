@@ -34,15 +34,15 @@
         </grammar>
         <filled>
             <if cond="confirm == '1'">
-                <goto next="#submit_form" />
+                <goto next="#test_form" />
          	  </if>
             <if cond="confirm == '2'">
-              <goto next="#end_call_form" />
+              <goto next="#test_form" />
             </if>
         </filled>
  	  </field>
 </form>
-<form id="submit_form">
+{# <form id="submit_form">
     <block>
 	    <prompt>
 	        <audio src="{{final_voice_label}}"/>
@@ -58,5 +58,12 @@
 	    </prompt>
         <goto next="{{ redirect_url }}" />
 	</block>
-</form> -->
+</form> #}
+<form id="test_form">
+	<block>
+	    <prompt>
+	        <audio src="{{ask_confirmation_voice_label}}"/>
+	    </prompt>
+	</block>
+</form>
 {% endblock %}
