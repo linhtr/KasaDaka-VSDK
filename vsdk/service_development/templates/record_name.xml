@@ -34,22 +34,24 @@
         </grammar>
         <filled>
             <if cond="confirm == '1'">
-                <prompt>
-                    <audio src="{{final_voice_label}}"/>
-                </prompt>
-                <assign name="redirect_url" expr="'{{ redirect_url }}'"/>
-                <!-- <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/> -->
+                <goto next="#submit_form" />
          	  </if>
             <if cond="confirm == '2'">
-              <prompt>
-                  <audio src="{{end_call_voice_label}}"/>
-              </prompt>
+              <goto next="#end_call_form" />
             </if>
         </filled>
  	  </field>
 </form>
-<!--
-<form id="final_form">
+<form id="submit_form">
+    <block>
+	    <prompt>
+	        <audio src="{{final_voice_label}}"/>
+	    </prompt>
+        <assign name="redirect_url" expr="'{{ redirect_url }}'"/>
+        <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
+	</block>
+</form>
+<form id="end_call_form">
 	<block>
 	    <prompt>
 	        <audio src="{{final_voice_label}}"/>
