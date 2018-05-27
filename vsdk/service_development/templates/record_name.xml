@@ -1,6 +1,6 @@
 {% extends "base.xml" %}
 {% block content %}
-<!-- <form id="record_form">
+<form id="record_form">
   	<record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
   		<prompt>
   		    <audio src="{{ ask_name_voice_label }}"/>
@@ -10,9 +10,10 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
-    <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" />
+    <goto next="#test_form" />
+    <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
-<form id="repeat_form">
+<!-- <form id="repeat_form">
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
