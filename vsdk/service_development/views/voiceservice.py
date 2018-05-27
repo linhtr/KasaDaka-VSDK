@@ -42,8 +42,7 @@ def voice_service_start(request, voice_service_id, session_id = None):
 
         # If there is no user with this caller_id and registration of users is preferred or required, redirect to registration
         elif voice_service.registration_preferred_or_required:
-            return redirect('service-development:user-registration',
-                    session.id)
+            return redirect('service-development:user-registration', session.id)
 
     # If there is no caller_id provided, and user registration is required for this service,
     # throw an error
@@ -59,8 +58,16 @@ def voice_service_start(request, voice_service_id, session_id = None):
         # After selection of language, return to start of voice service.
         return_url = reverse('service-development:voice-service', args = [session.service.id,session.id])
         return base.redirect_add_get_parameters('service-development:language-selection',
-                        session.id,
-                        redirect_url = return_url)
+            session.id,
+            redirect_url = return_url
+        )
+
+    if session.service.registration_name and session.user.name_voice == None: #where name_voice is the SpokenUserInput
+        return_url = reverse('service-development:voice-service', args = [session.service.id,session.id])
+        return base.redirect_add_get_parameters('service-development:record_name', user.id,
+            session.id,
+            redirect_url = redirect_url
+        )
 
     return redirect('service-development:batch-submit', session_id = session.id)
     # return base.redirect_to_voice_service_element(voice_service.start_element, session)
