@@ -60,7 +60,7 @@ class BatchSubmission(TemplateView):
             raise ValueError('Incorrect request, redirect_url not set')
         print("batchtest2")
         if 'days_ago' in request.POST:
-            days_ago = request.POST['days_ago']
+            days_ago = int(request.POST['days_ago'])
         else:
             days_ago = 0
 
