@@ -6,7 +6,7 @@
 
 	<block>
 	    <prompt>
-	        <audio src="{{final_voice_label}}"/>
+	        <audio src="{{end_call_voice_label}}"/>
 	        <goto next="{{ redirect_url }}" />
 	    </prompt>
 	</block>

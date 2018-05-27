@@ -25,7 +25,8 @@ def record_generate_context(session, redirect_url):
                'max_time_input' : max_time_input,
                'repeat_recording_to_caller' : repeat_recording_to_caller,
                'ask_confirmation' : ask_confirmation,
-               'barge_in' : barge_in
+               'barge_in' : barge_in,
+               "end_call_voice_label" : language.get_interface_voice_label_url_dict["end_call"]
                }
 
     return context
@@ -79,5 +80,5 @@ def record_name(request, user_id, session_id):
 
     print(request)
     print(context)
-    
+
     return render(request, 'record_name.xml', context, content_type='text/xml')
