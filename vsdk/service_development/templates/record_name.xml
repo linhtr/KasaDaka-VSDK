@@ -9,8 +9,8 @@
 	         <audio src="{{ did_not_hear_voice_label }}"/>
 	         <reprompt/>
 	    </noinput>
+        <goto next="#test_form" />
   	</record>
-    <goto next="#test_form" />
     <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
 <!-- <form id="repeat_form">
