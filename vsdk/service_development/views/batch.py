@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404, redirec
 from django.urls import reverse
 from django.views.generic import TemplateView
 from django.core.exceptions import ObjectDoesNotExist
+from django.http import HttpResponseRedirect
 from datetime import datetime, timedelta
 
 from ..models import KasaDakaUser, CallSession, Language, Disease, VoiceLabel, Batch
