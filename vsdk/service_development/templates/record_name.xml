@@ -10,40 +10,15 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
+    {% if repeat_recording_to_caller %}
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
-    <field name="confirm">
-        <prompt>
-            <audio src="{{ask_confirmation_voice_label}}"/>
-        </prompt>
-        <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
-            <rule id="MYRULE" scope = "public">
-              <one-of>
-                  <item>1</item>
-                  <item>2</item>
-              </one-of>
-            </rule>
-        </grammar>
-        <filled>
-            <if cond="confirm == '1'">
-                <block>
-                    <prompt>
-                    <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
-                    </prompt>
-                </block>
-         	  </if>
-            <if cond="confirm == '2'">
-                <block>
-                    <prompt>
-                    <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
-                    </prompt>
-                </block>
-            </if>
-        </filled>
- 	  </field>
+    {% if endif %}
+    <filled>
+        <goto next="#confirm_form" />
     <!-- <goto next="#test_form" /> -->
     <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
@@ -55,7 +30,7 @@
     </block>
     <goto next="#confirm_form" />
 </form> -->
-<!--<form id="confirm_form">
+<form id="confirm_form">
     <field name="confirm">
         <prompt>
             <audio src="{{ask_confirmation_voice_label}}"/>
@@ -77,7 +52,7 @@
             </if>
         </filled>
  	  </field>
-</form> -->
+</form>
 <!-- <form id="submit_form">
     <block>
 	    <prompt>
@@ -95,11 +70,11 @@
         <goto next="{{ redirect_url }}" />
 	</block>
 </form> -->
-<!-- <form id="test_form">
+<form id="test_form">
 	<block>
 	    <prompt>
 	        <audio src="{{ask_confirmation_voice_label}}"/>
 	    </prompt>
 	</block>
-</form> -->
+</form>
 {% endblock %}
