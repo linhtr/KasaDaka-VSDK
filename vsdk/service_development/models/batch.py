@@ -11,7 +11,7 @@ class Batch(models.Model):
         KasaDakaUser,
         verbose_name = 'User',
         on_delete = models.CASCADE,
-        null  = True,
+        null  = False,
         blank = False,
     )
 
