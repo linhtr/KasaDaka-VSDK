@@ -19,6 +19,7 @@
     {% if endif %}
     <filled>
         <goto next="#confirm_form" />
+    </filled>
     <!-- <goto next="#test_form" /> -->
     <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
@@ -70,7 +71,7 @@
         <goto next="{{ redirect_url }}" />
 	</block>
 </form> -->
-<form id="test_form">
+<!-- <form id="test_form">
 	<block>
 	    <prompt>
 	        <audio src="{{ask_confirmation_voice_label}}"/>
