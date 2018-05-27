@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from django.core.exceptions import ObjectDoesNotExist
 from datetime import datetime, timedelta
 
-from ..models import KasaDakaUser, CallSession, Language, Disease, VoiceLabel
+from ..models import KasaDakaUser, CallSession, Language, Disease, VoiceLabel, Batch
 
 from . import base
 
