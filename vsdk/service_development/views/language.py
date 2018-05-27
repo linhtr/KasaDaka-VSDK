@@ -30,6 +30,9 @@ class LanguageSelection(TemplateView):
         voice_service = session.service
         if 'redirect_url' in request.GET:
             redirect_url = request.GET['redirect_url']
+        else:
+            redirect_url = ""
+            
         return self.render_language_selection_form(request, session, redirect_url)
 
     def post(self, request, session_id):

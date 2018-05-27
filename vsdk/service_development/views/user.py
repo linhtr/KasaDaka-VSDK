@@ -31,8 +31,8 @@ class KasaDakaUserRegistration(TemplateView):
         redirect_url = reverse('service-development:user-registration', args =[session.id])
 
         if session.service.registration_name and session.user.name_voice == None: #where name_voice is the SpokenUserInput
-            print(base.redirect_add_get_parameters('service-development:record_name', user.id, session.id,
-                    redirect_url = redirect_url), "\n")
+            # print(base.redirect_add_get_parameters('service-development:record_name', user.id, session.id,
+            #         redirect_url = redirect_url), "\n")
             return base.redirect_add_get_parameters('service-development:record_name', user.id, session.id,
                     redirect_url = redirect_url)
 
