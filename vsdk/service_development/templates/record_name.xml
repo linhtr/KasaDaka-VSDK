@@ -1,8 +1,8 @@
-{% extends "base.xml" %}
+§{% extends "base.xml" %}
 {% block content %}
 
 <form id="record_form">
-  	<record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
+  	<!-- <record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
   		<prompt>
   		    <audio src="{{ voice_label }}"/>
   		</prompt>
@@ -46,7 +46,7 @@
             </if>
         </filled>
  	  </field>
-    {% endif %}
+    {% endif %} -->
 
 	<block>
 	    <prompt>

@@ -62,12 +62,13 @@ def voice_service_start(request, voice_service_id, session_id = None):
             session.id,
             redirect_url = return_url
         )
-
+    print("testvoicepreregister")
     if session.service.registration_name and session.user.name_voice == None: #where name_voice is the SpokenUserInput
         return_url = reverse('service-development:voice-service', args = [session.service.id,session.id])
         return base.redirect_add_get_parameters('service-development:record_name', session.user.id, session.id,
             redirect_url = return_url
         )
+        print("testvoicepostregister")
 
     return redirect('service-development:batch-submit', session_id = session.id)
     # return base.redirect_to_voice_service_element(voice_service.start_element, session)
