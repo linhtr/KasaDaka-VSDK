@@ -10,14 +10,34 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
+    <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" />
+</form>
+<form id="repeat_form">
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
-    <goto next="#test_form" />
+    <goto next="#confirm_form" />
 </form>
 
+<!-- <form id="submit_form">
+    <block>
+	    <prompt>
+	        <audio src="{{final_voice_label}}"/>
+	    </prompt>
+        <assign name="redirect_url" expr="'{{ redirect_url }}'"/>
+        <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
+	</block>
+</form>
+<form id="end_call_form">
+	<block>
+	    <prompt>
+	        <audio src="{{final_voice_label}}"/>
+	    </prompt>
+        <goto next="{{ redirect_url }}" />
+	</block>
+</form> -->
 <form id="test_form">
 	<block>
 	    <prompt>
