@@ -8,3 +8,4 @@ from .language import *
 from .disease import *
 from .record_name import *
 from .batch import *
+from .endcall import *

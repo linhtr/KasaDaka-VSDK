@@ -1,0 +1,10 @@
+{% extends "base.xml" %}
+{% block content%}
+<form id="end_call_form">
+	<block>
+      <prompt>
+          <audio src="{{end_call_voice_label}}"/>
+      </prompt>
+	</block>
+</form>
+{% endblock %}

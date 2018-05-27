@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^record_name/(?P<user_id>[0-9]+)/(?P<session_id>[0-9]+)$', views.record_name  , name='record_name'),
     url(r'^disease_submit/(?P<session_id>[0-9]+)$', views.DiseaseSubmission.as_view(), name = 'disease-submission'),
     url(r'^batch_submit/(?P<session_id>[0-9]+)$', views.BatchSubmission.as_view(), name = 'batch-submit'),
+    url(r'^end_call/(?P<session_id>[0-9]+)$', views.EndCall.as_view(), name = 'end-call'),
     # url(r'^record/(?P<element_id>[0-9]+)/(?P<session_id>[0-9]+)$', views.record, name='record')
 ]

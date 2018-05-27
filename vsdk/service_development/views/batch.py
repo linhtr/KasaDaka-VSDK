@@ -47,7 +47,7 @@ class BatchSubmission(TemplateView):
         if 'redirect_url' in request.GET:
             redirect_url = request.GET['redirect_url']
         else:
-            redirect_url = None
+            redirect_url = reverse('service-development:end-call', args = [session.id])
         return self.render_batch_submission_form(request, session, redirect_url)
 
     def post(self, request, session_id):
@@ -75,5 +75,5 @@ class BatchSubmission(TemplateView):
             raise ObjectDoesNotExist
 
         batch.schedule_vaccinations()
-        print(redirect_url)
-        # return HttpResponseRedirect(redirect_url)
+
+        return HttpResponseRedirect(redirect_url)

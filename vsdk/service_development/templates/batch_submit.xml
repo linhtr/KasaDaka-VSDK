@@ -33,6 +33,9 @@
           <audio src="{{batch_days_ago_voice_label}}"/>
       </prompt>
       <filled>
+          <prompt>
+              <audio src="{{thank_you_submitted_voice_label}}" />
+          </prompt>
           {# saves the input to a variable with the name given, to be submitted later #}
      	    <assign name="days_ago" expr="batch_days_field" />
   		    {# forward the user to the given goto form #}
@@ -56,9 +59,6 @@
     	<assign name="{{ key }}" expr="'{{ value }}'" />
     	{% endfor %}
     	<submit next="{{ redirect_url_POST }}" method="post" namelist="days_ago {% for key, value in pass_on_variables.items %} {{ key }} {% endfor %}"/>
-		<prompt>
-			<audio src="{{thank_you_submitted_voice_label}}" />
-		</prompt>
       <goto next="#end_call_form"/>
   </block>
 </form>
