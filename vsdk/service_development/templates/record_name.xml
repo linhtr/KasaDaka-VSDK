@@ -17,9 +17,9 @@
         </prompt>
     </block>
     {% endif %}
-    <!-- <goto next="#confirm_form" /> -->
+    <goto next="#confirm_form" />
 </form>
-<!-- <form id="confirm_form">
+<form id="confirm_form">
     <field name="confirm">
         <prompt>
             <audio src="{{ask_confirmation_voice_label}}"/>
@@ -41,11 +41,15 @@
                 <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
          	  </if>
             <if cond="confirm == '2'">
-              <goto next="#final_form"/>
+              <!-- <goto next="#final_form"/> -->
+              <prompt>
+                  <audio src="{{end_call_voice_label}}"/>
+              </prompt>
             </if>
         </filled>
  	  </field>
 </form>
+<!--
 <form id="final_form">
 	<block>
 	    <prompt>
