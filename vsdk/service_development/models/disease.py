@@ -6,6 +6,7 @@ from .disease_vaccinationday import DiseaseVaccinationday
 
 class Disease(models.Model):
     name = models.CharField(max_length=200)
+    description = models.CharField(max_length=1000, blank=True, null=True)
     voice_label = models.ForeignKey(
             VoiceLabel,
             verbose_name = 'Voice label',
