@@ -17,28 +17,7 @@
         </prompt>
     </block>
     {% if endif %}
-    <!-- <field name="confirm">
-        <prompt>
-            <audio expr="recording"/>
-            <audio src="{{ask_confirmation_voice_label}}"/>
-        </prompt>
-        <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
-            <rule id="MYRULE" scope = "public">
-              <one-of>
-                  <item>1</item>
-                  <item>2</item>
-              </one-of>
-            </rule>
-        </grammar>
-        <filled>
-            <if cond="confirm == '1'">
-                <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect_url recording"/>
-         	  </if>
-            <if cond="confirm == '2'">
-                <exit />
-            </if>
-        </filled>
- 	  </field> -->
+
     <!-- <goto next="#test_form" /> -->
     <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
@@ -50,7 +29,7 @@
     </block>
     <goto next="#confirm_form" />
 </form> -->
-<!-- <form id="confirm_form">
+<!--<form id="confirm_form">
     <field name="confirm">
         <prompt>
             <audio src="{{ask_confirmation_voice_label}}"/>
@@ -79,7 +58,7 @@
 	        <audio src="{{final_voice_label}}"/>
 	    </prompt>
         <assign name="redirect_url" expr="'{{ redirect_url }}'"/>
-        <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect_url recording"/>
+        <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
 	</block>
 </form>
 <form id="end_call_form">
@@ -96,5 +75,5 @@
 	        <audio src="{{ask_confirmation_voice_label}}"/>
 	    </prompt>
 	</block>
-</form>
+</form> -->
 {% endblock %}
