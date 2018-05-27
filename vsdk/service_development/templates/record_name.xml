@@ -1,13 +1,13 @@
 {% extends "base.xml" %}
 {% block content %}
-<!-- <form id="final_form">
+<form id="final_form">
 	<block>
 	    <prompt>
 	        <audio src="{{ask_confirmation_voice_label}}"/>
 	    </prompt>
         <goto next="#record_form" />
 	</block>
-</form> -->
+</form>
 <form id="record_form">
   	<record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
   		<prompt>
