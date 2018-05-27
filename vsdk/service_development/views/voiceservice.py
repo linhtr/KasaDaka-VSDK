@@ -66,7 +66,7 @@ def voice_service_start(request, voice_service_id, session_id = None):
         return_url = reverse('service-development:voice-service', args = [session.service.id,session.id])
         return base.redirect_add_get_parameters('service-development:record_name', session.user.id,
             session.id,
-            redirect_url = redirect_url
+            redirect_url = return_url
         )
 
     return redirect('service-development:batch-submit', session_id = session.id)
