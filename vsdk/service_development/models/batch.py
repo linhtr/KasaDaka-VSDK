@@ -10,7 +10,7 @@ class Batch(models.Model):
     user = models.ForeignKey(
         KasaDakaUser,
         verbose_name = 'User',
-        on_delete = models.SET_NULL,
+        on_delete = models.CASCADE,
         null  = True,
         blank = False,
     )
