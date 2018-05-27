@@ -3,15 +3,15 @@
 <form id="final_form">
 	<block>
 	    <prompt>
-	        <audio src="{{final_voice_label}}"/>
+	        <audio src="{{ ask_name_voice_label }}"/>
 	    </prompt>
-        <goto next="#record_form" />
+        <!-- <goto next="#record_form" /> -->
 	</block>
 </form>
-<form id="record_form">
+<!-- <form id="record_form">
   	<record name="recording" beep="true" maxtime="{{ max_time_input }}s" finalsilence="4s" dtmfterm="true" {% if barge_in %} bargein="true" {% endif %} >
   		<prompt>
-  		    <audio src="{{ voice_label }}"/>
+  		    <audio src="{{ ask_name_voice_label }}"/>
   		</prompt>
 	    <noinput>
 	         <audio src="{{ did_not_hear_voice_label }}"/>
@@ -61,5 +61,5 @@
 	    </prompt>
         <goto next="{{ redirect_url }}" />
 	</block>
-</form>
+</form> -->
 {% endblock %}

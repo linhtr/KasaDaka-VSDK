@@ -6,7 +6,7 @@ def record_generate_context(session, redirect_url):
     language = session.language
 
 
-    ask_name = language.get_interface_voice_label_url_dict["ask_name"]
+    ask_name_voice_label = language.get_interface_voice_label_url_dict["ask_name"]
     ask_confirmation_voice_label = language.get_interface_voice_label_url_dict["ask_confirmation"]
     repeat_voice_label = language.get_interface_voice_label_url_dict["repeat"]
     final_voice_label = language.get_interface_voice_label_url_dict["final"]
@@ -19,7 +19,7 @@ def record_generate_context(session, redirect_url):
 
     context = {
                'redirect_url': redirect_url,
-               'voice_label' : ask_name,
+               'ask_name_voice_label' : ask_name_voice_label,
                'ask_confirmation_voice_label' : ask_confirmation_voice_label,
                'repeat_voice_label' : repeat_voice_label ,
                'final_voice_label' : final_voice_label,
