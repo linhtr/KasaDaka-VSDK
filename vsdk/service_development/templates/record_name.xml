@@ -19,46 +19,7 @@
     {% endif %}
     <goto next="#test_form" />
 </form>
-<!-- <form id="confirm_form">
-    <field name="confirm">
-        <prompt>
-            <audio src="{{ask_confirmation_voice_label}}"/>
-        </prompt>
-        <grammar xml:lang="en-US" root = "MYRULE" mode="dtmf">
-            <rule id="MYRULE" scope = "public">
-              <one-of>
-                  <item>1</item>
-                  <item>2</item>
-              </one-of>
-            </rule>
-        </grammar>
-        <filled>
-            <if cond="confirm == '1'">
-                <goto next="#test_form" />
-         	  </if>
-            <if cond="confirm == '2'">
-              <goto next="#test_form" />
-            </if>
-        </filled>
- 	  </field>
-</form> -->
-<!-- <form id="submit_form">
-    <block>
-	    <prompt>
-	        <audio src="{{final_voice_label}}"/>
-	    </prompt>
-        <assign name="redirect_url" expr="'{{ redirect_url }}'"/>
-        <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect recording"/>
-	</block>
-</form>
-<form id="end_call_form">
-	<block>
-	    <prompt>
-	        <audio src="{{final_voice_label}}"/>
-	    </prompt>
-        <goto next="{{ redirect_url }}" />
-	</block>
-</form> -->
+
 <form id="test_form">
 	<block>
 	    <prompt>
