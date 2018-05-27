@@ -5,6 +5,7 @@ from ..models import *
 def record_generate_context(session, redirect_url):
     language = session.language
 
+
     ask_name = language.get_interface_voice_label_url_dict["ask_name"]
     ask_confirmation_voice_label = language.get_interface_voice_label_url_dict["ask_confirmation"]
     repeat_voice_label = language.get_interface_voice_label_url_dict["repeat"]
@@ -14,6 +15,7 @@ def record_generate_context(session, redirect_url):
     ask_confirmation = True
     max_time_input = 180
     barge_in = False
+    redirect_url_post = reverse('service-development:record_name', args =[session.user.id, session.id])
 
     context = {
                'redirect_url': redirect_url,
@@ -26,7 +28,8 @@ def record_generate_context(session, redirect_url):
                'repeat_recording_to_caller' : repeat_recording_to_caller,
                'ask_confirmation' : ask_confirmation,
                'barge_in' : barge_in,
-               "end_call_voice_label" : language.get_interface_voice_label_url_dict["end_call"]
+               "end_call_voice_label" : language.get_interface_voice_label_url_dict["end_call"],
+               "redirect_url_post" : redirect_url_post
                }
 
     return context
@@ -71,7 +74,7 @@ def record_name(request, user_id, session_id):
         print("recordtest36")
 
         # redirect to next element
-        return redirect(request.POST['redirect'])
+        return redirect(redirect_url)
 
     context = record_generate_context(session, redirect_url)
     print("recordtest41")
