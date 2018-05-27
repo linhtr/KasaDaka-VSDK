@@ -10,14 +10,14 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
-    <!-- {% if repeat_recording_to_caller %}
+    {% if repeat_recording_to_caller %}
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
-    {% if endif %} -->
-    <field name="confirm">
+    {% if endif %}
+    <!-- <field name="confirm">
         <prompt>
             <audio expr="recording"/>
             <audio src="{{ask_confirmation_voice_label}}"/>
@@ -32,14 +32,13 @@
         </grammar>
         <filled>
             <if cond="confirm == '1'">
-                <!-- <goto next="#submit_form" /> -->
                 <submit next="{{ redirect_url_post }}" enctype="multipart/form-data" method="post" namelist="redirect_url recording"/>
          	  </if>
             <if cond="confirm == '2'">
                 <exit />
             </if>
         </filled>
- 	  </field>
+ 	  </field> -->
     <!-- <goto next="#test_form" /> -->
     <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
