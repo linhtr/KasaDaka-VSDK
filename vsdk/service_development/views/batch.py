@@ -76,4 +76,4 @@ class BatchSubmission(TemplateView):
 
         batch.schedule_vaccinations()
         print(redirect_url)
-        return HttpResponseRedirect(redirect_url)
+        # return HttpResponseRedirect(redirect_url)
