@@ -10,17 +10,22 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
+    <block>
+        <prompt>
+        <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
+        </prompt>
+    </block>
     <!-- <goto next="#test_form" /> -->
-    <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" />
+    <!-- <goto next="{% if repeat_recording_to_caller %}repeat_form{% else %}test_form{% endif %}" /> -->
 </form>
- <form id="repeat_form">
+<!-- <form id="repeat_form">
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
     <goto next="#confirm_form" />
-</form>
+</form> -->
 <!--<form id="confirm_form">
     <field name="confirm">
         <prompt>
