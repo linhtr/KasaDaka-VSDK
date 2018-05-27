@@ -17,14 +17,6 @@
 },
 {
   "model": "service_development.voicelabel",
-  "pk": 3,
-  "fields": {
-    "name": "This is the truth",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
   "pk": 4,
   "fields": {
     "name": "English language",
@@ -36,14 +28,6 @@
   "pk": 5,
   "fields": {
     "name": "Thank you for using this service",
-    "description": ""
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 6,
-  "fields": {
-    "name": "Wow, it must be a really boring guy!",
     "description": ""
   }
 },
@@ -173,14 +157,6 @@
   "fields": {
     "name": "No account",
     "description": null
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 23,
-  "fields": {
-    "name": "Does the king like to drink beer?",
-    "description": ""
   }
 },
 {
@@ -409,26 +385,10 @@
 },
 {
   "model": "service_development.voicelabel",
-  "pk": 58,
-  "fields": {
-    "name": "Chicken Aids",
-    "description": "Chicken Aids"
-  }
-},
-{
-  "model": "service_development.voicelabel",
   "pk": 59,
   "fields": {
     "name": "amount infected",
     "description": null
-  }
-},
-{
-  "model": "service_development.voicelabel",
-  "pk": 60,
-  "fields": {
-    "name": "wav_file_missing",
-    "description": "wav file missing"
   }
 },
 {
@@ -600,24 +560,6 @@
     "thank_you_submitted": 68,
     "welcome_user": 69,
     "end_call": 39
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 1,
-  "fields": {
-    "parent": 6,
-    "language": 2,
-    "audio": "boring_guy_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 2,
-  "fields": {
-    "parent": 6,
-    "language": 1,
-    "audio": "boring_guy_nl.wav"
   }
 },
 {
@@ -1054,15 +996,6 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 54,
-  "fields": {
-    "parent": 6,
-    "language": 3,
-    "audio": "boring_guy_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 55,
   "fields": {
     "parent": 5,
@@ -1117,33 +1050,6 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 61,
-  "fields": {
-    "parent": 3,
-    "language": 1,
-    "audio": "truth_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 62,
-  "fields": {
-    "parent": 3,
-    "language": 2,
-    "audio": "truth_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 63,
-  "fields": {
-    "parent": 3,
-    "language": 3,
-    "audio": "truth_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 64,
   "fields": {
     "parent": 2,
@@ -1194,33 +1100,6 @@
     "parent": 1,
     "language": 3,
     "audio": "dutch_fr.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 70,
-  "fields": {
-    "parent": 23,
-    "language": 1,
-    "audio": "king_question_nl.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 71,
-  "fields": {
-    "parent": 23,
-    "language": 2,
-    "audio": "king_question_en.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 72,
-  "fields": {
-    "parent": 23,
-    "language": 3,
-    "audio": "king_question_fr.wav"
   }
 },
 {
@@ -1436,7 +1315,7 @@
   "fields": {
     "parent": 39,
     "language": 2,
-    "audio": "end_call_en_uiYYkXX.wav"
+    "audio": "end_call_en.wav"
   }
 },
 {
@@ -1445,7 +1324,7 @@
   "fields": {
     "parent": 39,
     "language": 3,
-    "audio": "end_call_fr_gTbeTkG.wav"
+    "audio": "end_call_fr.wav"
   }
 },
 {
@@ -1720,15 +1599,6 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 139,
-  "fields": {
-    "parent": 58,
-    "language": 2,
-    "audio": "1_fr_yq0BBDT.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 140,
   "fields": {
     "parent": 59,
@@ -1747,29 +1617,11 @@
 },
 {
   "model": "service_development.voicefragment",
-  "pk": 142,
-  "fields": {
-    "parent": 60,
-    "language": 2,
-    "audio": "wav_file_is_missing_Aq1PYjQ.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
-  "pk": 143,
-  "fields": {
-    "parent": 60,
-    "language": 3,
-    "audio": "wav_file_is_missing_Aq1PYjQ_OjY07rC.wav"
-  }
-},
-{
-  "model": "service_development.voicefragment",
   "pk": 144,
   "fields": {
     "parent": 61,
     "language": 2,
-    "audio": "ask_name_en_e8Dh1Wb.wav"
+    "audio": "ask_name_en.wav"
   }
 },
 {
@@ -1778,7 +1630,7 @@
   "fields": {
     "parent": 61,
     "language": 3,
-    "audio": "ask_name_fr_gNkDGqE.wav"
+    "audio": "ask_name_fr.wav"
   }
 },
 {
@@ -1787,7 +1639,7 @@
   "fields": {
     "parent": 62,
     "language": 2,
-    "audio": "ask_confirmation_en_Ph4BQhK.wav"
+    "audio": "ask_confirmation_en.wav"
   }
 },
 {
@@ -1796,7 +1648,7 @@
   "fields": {
     "parent": 62,
     "language": 3,
-    "audio": "ask_confirmation_fr_9abua2j.wav"
+    "audio": "ask_confirmation_fr.wav"
   }
 },
 {
@@ -1805,7 +1657,7 @@
   "fields": {
     "parent": 63,
     "language": 2,
-    "audio": "repeat_name_en_y11NwVY.wav"
+    "audio": "repeat_name_en.wav"
   }
 },
 {
@@ -1814,7 +1666,7 @@
   "fields": {
     "parent": 63,
     "language": 3,
-    "audio": "repeat_name_fr_MFZ3cWI.wav"
+    "audio": "repeat_name_fr.wav"
   }
 },
 {
@@ -1823,7 +1675,7 @@
   "fields": {
     "parent": 64,
     "language": 2,
-    "audio": "final_registration_en_Tn4SyDJ.wav"
+    "audio": "final_registration_en.wav"
   }
 },
 {
@@ -1832,7 +1684,7 @@
   "fields": {
     "parent": 64,
     "language": 3,
-    "audio": "final_registration_fr_W7L2Jk6.wav"
+    "audio": "final_registration_fr.wav"
   }
 },
 {
@@ -1841,7 +1693,7 @@
   "fields": {
     "parent": 65,
     "language": 2,
-    "audio": "did_not_hear_en_37eEL8r.wav"
+    "audio": "did_not_hear_en.wav"
   }
 },
 {
@@ -1850,7 +1702,7 @@
   "fields": {
     "parent": 65,
     "language": 3,
-    "audio": "did_not_hear_fr_HWsjJrR.wav"
+    "audio": "did_not_hear_fr.wav"
   }
 },
 {
@@ -1859,7 +1711,7 @@
   "fields": {
     "parent": 66,
     "language": 2,
-    "audio": "ask_submit_batch_en_4cH2Ku6.wav"
+    "audio": "ask_submit_batch_en.wav"
   }
 },
 {
@@ -1868,7 +1720,7 @@
   "fields": {
     "parent": 66,
     "language": 3,
-    "audio": "ask_submit_batch_fr_e2iWnNo.wav"
+    "audio": "ask_submit_batch_fr.wav"
   }
 },
 {
@@ -1877,7 +1729,7 @@
   "fields": {
     "parent": 67,
     "language": 2,
-    "audio": "batch_days_ago_en_yRFM9iW.wav"
+    "audio": "batch_days_ago_en.wav"
   }
 },
 {
@@ -1886,7 +1738,7 @@
   "fields": {
     "parent": 67,
     "language": 3,
-    "audio": "batch_days_ago_fr_LXh3qBx.wav"
+    "audio": "batch_days_ago_fr.wav"
   }
 },
 {
@@ -1895,7 +1747,7 @@
   "fields": {
     "parent": 68,
     "language": 2,
-    "audio": "thank_you_submitted_en_36lfzkK.wav"
+    "audio": "thank_you_submitted_en.wav"
   }
 },
 {
@@ -1904,7 +1756,7 @@
   "fields": {
     "parent": 68,
     "language": 3,
-    "audio": "thank_you_submitted_fr_UZqJ6i5.wav"
+    "audio": "thank_you_submitted_fr.wav"
   }
 },
 {
@@ -1913,7 +1765,7 @@
   "fields": {
     "parent": 69,
     "language": 2,
-    "audio": "welcome_user_en_3Fw9mrl.wav"
+    "audio": "welcome_user_en.wav"
   }
 },
 {
@@ -1922,7 +1774,7 @@
   "fields": {
     "parent": 69,
     "language": 3,
-    "audio": "welcome_user_fr_GbFWD9g.wav"
+    "audio": "welcome_user_fr.wav"
   }
 },
 {
@@ -2027,7 +1879,7 @@
     "first_name": "John",
     "last_name": "Williams",
     "creation_date": "2018-04-30T17:42:21.678Z",
-    "modification_date": "2018-05-25T17:18:58.799Z",
+    "modification_date": "2018-05-27T12:34:14.624Z",
     "language": 2,
     "service": 2,
     "name_voice": null
@@ -2713,6 +2565,18 @@
     "end": null,
     "user": null,
     "caller_id": null,
+    "service": 2,
+    "_language": null
+  }
+},
+{
+  "model": "service_development.callsession",
+  "pk": 58,
+  "fields": {
+    "start": "2018-05-27T12:37:00.466Z",
+    "end": null,
+    "user": null,
+    "caller_id": "anonymous",
     "service": 2,
     "_language": null
   }
