@@ -17,9 +17,9 @@
         </prompt>
     </block>
     {% endif %}
-    <goto next="#confirm_form" />
+    <goto next="#test_form" />
 </form>
-<form id="confirm_form">
+<!-- <form id="confirm_form">
     <field name="confirm">
         <prompt>
             <audio src="{{ask_confirmation_voice_label}}"/>
@@ -41,7 +41,7 @@
             </if>
         </filled>
  	  </field>
-</form>
+</form> -->
 <!-- <form id="submit_form">
     <block>
 	    <prompt>
