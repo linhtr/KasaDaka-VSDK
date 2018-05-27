@@ -22,6 +22,7 @@ def voice_service_start(request, voice_service_id, session_id = None):
     If all requirements are fulfilled, redirects to the starting element of the
     voice service.
     """
+    print("STARTED VOICE SERVICE")
     voice_service = get_object_or_404(VoiceService, pk=voice_service_id)
 
     if not voice_service.active:
@@ -64,8 +65,7 @@ def voice_service_start(request, voice_service_id, session_id = None):
 
     if session.service.registration_name and session.user.name_voice == None: #where name_voice is the SpokenUserInput
         return_url = reverse('service-development:voice-service', args = [session.service.id,session.id])
-        return base.redirect_add_get_parameters('service-development:record_name', session.user.id,
-            session.id,
+        return base.redirect_add_get_parameters('service-development:record_name', session.user.id, session.id,
             redirect_url = return_url
         )
 

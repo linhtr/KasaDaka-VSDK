@@ -53,27 +53,35 @@ class BatchSubmission(TemplateView):
         """
         Saves the disease submissions
         """
+        print("batchtest1")
         if 'redirect_url' in request.POST:
             redirect_url = request.POST['redirect_url']
         else:
             raise ValueError('Incorrect request, redirect_url not set')
-
+        print("batchtest2")
         if 'days_ago' not in request.POST:
             days_ago = 0
 
         session = get_object_or_404(CallSession, pk = session_id)
+        print("batchtest3")
         voice_service = session.service
-
+        print("batchtest4")
         user = get_object_or_404(Disease, pk = session.user_id)
-
+        print("batchtest5")
         batch = Batch()
+        print("batchtest6")
         batch.user = user
+        print("batchtest7")
         batch.date = datetime.now() - timedelta(days = days_ago)
+        print("batchtest8")
         batch.save()
+        print("batchtest9")
 
         if not batch.id:
             raise ObjectDoesNotExist
+        print("batchtest10")
 
         batch.schedule_vaccinations()
+        print("batchtest11")
 
         return HttpResponseRedirect(redirect_url)
