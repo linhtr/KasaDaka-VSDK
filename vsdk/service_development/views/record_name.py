@@ -77,4 +77,7 @@ def record_name(request, user_id, session_id):
     context['url'] = request.get_full_path(False)
     print("recordtest42")
 
+    print(request)
+    print(context)
+    
     return render(request, 'record_name.xml', context, content_type='text/xml')
