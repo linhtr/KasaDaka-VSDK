@@ -59,7 +59,9 @@ class BatchSubmission(TemplateView):
         else:
             raise ValueError('Incorrect request, redirect_url not set')
         print("batchtest2")
-        if 'days_ago' not in request.POST:
+        if 'days_ago' in request.POST:
+            days_ago = request.POST['days_ago']
+        else:
             days_ago = 0
 
         session = get_object_or_404(CallSession, pk = session_id)
