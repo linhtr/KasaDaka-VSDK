@@ -25,7 +25,7 @@
         </prompt>
     </block>
     {% endif %}
-    <goto next="#confirm_form" />
+    <!-- <goto next="#confirm_form" /> -->
 </form>
 <!-- <form id="confirm_form">
     <field name="confirm">
