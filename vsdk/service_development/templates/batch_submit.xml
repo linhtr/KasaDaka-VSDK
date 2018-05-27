@@ -45,13 +45,12 @@
 </form>
 
 <form id="end_call_form">
-  <field name="end_call_field">
+	<block>
       <prompt>
           <audio src="{{end_call_voice_label}}"/>
       </prompt>
-  </field>
+	</block>
 </form>
-
 
 <form id="submit_form">
   <block>
