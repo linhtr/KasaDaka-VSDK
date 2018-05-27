@@ -10,13 +10,11 @@
 	         <reprompt/>
 	    </noinput>
   	</record>
-    {% if repeat_recording_to_caller %}
     <block>
         <prompt>
         <audio src="{{ repeat_voice_label }}"/> <audio expr="recording"/>
         </prompt>
     </block>
-    {% endif %}
     <goto next="#test_form" />
 </form>
 
