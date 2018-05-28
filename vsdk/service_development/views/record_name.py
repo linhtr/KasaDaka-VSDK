@@ -40,7 +40,7 @@ def record_name(request, user_id, session_id):
     user = get_object_or_404(KasaDakaUser, pk=user_id)
     voice_service = user.service
     session = lookup_or_create_session(voice_service, session_id)
-    print("recordtest1")
+
     if 'redirect_url' in request.GET:
         redirect_url = request.GET['redirect_url']
     elif 'redirect_url' in request.POST:
@@ -48,40 +48,28 @@ def record_name(request, user_id, session_id):
     else:
         redirect_url = reverse('service-development:user-registration', args =[session.id])
 
-    print("recordtest2")
     if request.method == "POST":
-        print("recordtest31")
         session = get_object_or_404(CallSession, pk=session_id)
 
         value = 'audio file'
 
-        print("recordtest32")
         result = SpokenUserInput()
 
-        print("recordtest33")
         result.session = session
-        print("recordtest34")
 
         result.audio = request.FILES['recording']
         result.audio.name = 'name_recording_s%s_u%s.wav' % (session_id, user_id)
         result.category = UserInputCategory.get(name="username")
 
         result.save()
-        print("recordtest35")
 
         user.name_voice = result
         user.save ()
-        print("recordtest36")
 
         # redirect to next element
         return redirect(redirect_url)
 
     context = record_generate_context(session, redirect_url)
-    print("recordtest41")
     context['url'] = request.get_full_path(False)
-    print("recordtest42")
-
-    print(request)
-    print(context)
 
     return render(request, 'record_name.xml', context, content_type='text/xml')
